@@ -1,0 +1,16 @@
+{
+  "source": "Unity",
+  "applications": [
+    {
+      "app_key": "application.generated.unity.per_quale_motivo_avremmo_un_mago.exe",
+      "launch_type": "url",
+      "url": "steam://launch/",
+      "action_manifest_path": "C:\\Users\\User\\Desktop\\VR_is_Magic\\Per_quale_motivo_avremmo_un_Mago\\Assets\\StreamingAssets\\SteamVR\\actions.json",
+      "strings": {
+        "en_us": {
+          "name": "Per_quale_motivo_avremmo_un_Mago [Testing]"
+        }
+      }
+    }
+  ]
+}
