@@ -6,9 +6,13 @@ public class GrabBehaviour : MonoBehaviour
 {
     List<Grabbable> grabbableInHand = new List<Grabbable>();
 
+    SphereCollider myCollider;
+    public float closeGrabDistance = 0.1f;
+
     // Start is called before the first frame update
     void Start()
     {
+        SetUpTrigger();
         InputManager.Singleton.grabEvent.AddListener(GrabObjectInHand);
         InputManager.Singleton.grabReleasEvent.AddListener(ReleasObjectInHand);
     }
@@ -18,6 +22,19 @@ public class GrabBehaviour : MonoBehaviour
     {
         
 
+    }
+
+    void SetUpTrigger()
+    {
+        myCollider = GetComponent<SphereCollider>();
+
+        if (myCollider == null)
+        {
+            myCollider = gameObject.AddComponent<SphereCollider>();
+        }
+
+        myCollider.radius = closeGrabDistance;
+        myCollider.isTrigger = true;
     }
 
     void GrabObjectInHand()
@@ -49,7 +66,7 @@ public class GrabBehaviour : MonoBehaviour
         }
     }
 
-    private void OnTriggerExxit(Collider collidedObject)
+    private void OnTriggerExit(Collider collidedObject)
     {
         Grabbable tempGrabbable = collidedObject.gameObject.GetComponent<Grabbable>();
 
