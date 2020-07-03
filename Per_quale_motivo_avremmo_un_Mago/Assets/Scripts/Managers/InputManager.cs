@@ -23,7 +23,6 @@ public class InputManager : MonoBehaviour
     public UnityEvent grabEvent;
     public UnityEvent grabReleasEvent;
     public UnityEvent pullEvent;
-    public UnityEvent pullReleasEvent;
 
     //[Header("Input Bools")]
     //public bool SoulGrabBool;
@@ -45,7 +44,9 @@ public class InputManager : MonoBehaviour
     {
         if (grabAction.GetStateDown(rightHand.handType))
         {
+            Debug.Log("eureca");
             grabEvent.Invoke();
+            
         }
         
         if (grabAction.GetStateUp(rightHand.handType))
@@ -56,11 +57,6 @@ public class InputManager : MonoBehaviour
         if (pullAction.GetStateDown(rightHand.handType))
         {
             pullEvent.Invoke();
-        }
-
-        if (pullAction.GetStateUp(rightHand.handType))
-        {
-            pullReleasEvent.Invoke();
         }
     }
 }

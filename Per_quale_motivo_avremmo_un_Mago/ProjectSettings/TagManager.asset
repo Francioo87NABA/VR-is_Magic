@@ -6,7 +6,8 @@ TagManager:
   tags:
   - Hand
   - Portone
-  - Explosive
+  - Ground
+  - Enemy
   layers:
   - Default
   - TransparentFX

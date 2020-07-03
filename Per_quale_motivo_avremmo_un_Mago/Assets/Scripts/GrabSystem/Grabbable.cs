@@ -5,6 +5,12 @@ using UnityEngine;
 public class Grabbable : MonoBehaviour
 {
     public Rigidbody myRigidbody;
+    public bool rotateToOriginWhenGrabbed;
+
+    [HideInInspector]
+    public GrabBehaviour connectedGrabBehaviour;
+    Coroutine setConnectedGrabBehaviourCoroutine;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -12,11 +18,34 @@ public class Grabbable : MonoBehaviour
         {
             myRigidbody = GetComponent<Rigidbody>();
         }
+
+        connectedGrabBehaviour = null;
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        if (connectedGrabBehaviour != null)// aggiungere che deve essere un anima e devi avere la bacchetta
+        {
+            myRigidbody.AddForce(connectedGrabBehaviour.objectVelocityToSet);
+            myRigidbody.AddTorque(connectedGrabBehaviour.currentHandRotation * connectedGrabBehaviour.objectVelocityToSet.magnitude);
+        }
+    }
+
+    public void SetConnectedGrabBehaviour(GrabBehaviour inHandGrabBehaviour)
+    {
+        if(setConnectedGrabBehaviourCoroutine != null)
+        {
+            StopCoroutine(setConnectedGrabBehaviourCoroutine);
+        }
+        setConnectedGrabBehaviourCoroutine = StartCoroutine(setConnectedGrabBehaviourEnumerator());
+        connectedGrabBehaviour = inHandGrabBehaviour;
+    }
+
+    IEnumerator setConnectedGrabBehaviourEnumerator()
+    {
+        yield return new WaitForSeconds(2);  //potrebbe causare errori con il rallentamento del tempo
+        connectedGrabBehaviour = null;
+        yield return null;
     }
 }

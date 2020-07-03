@@ -6,8 +6,9 @@ public class SpellManager : MonoBehaviour
 {
     public static SpellManager Singleton;
 
-    public int i = 1;
+    public int mana = 3;
 
+    [Header("Maggie")]
     public bool celestialIsCasted;
 
     private void OnEnable()
@@ -22,6 +23,7 @@ public class SpellManager : MonoBehaviour
         if (spellToCast.spellName == "Celestial")
         {
             celestialIsCasted = true;
+            mana -= 1;
         }
     }
 }

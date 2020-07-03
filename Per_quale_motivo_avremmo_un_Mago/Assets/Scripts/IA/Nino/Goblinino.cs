@@ -9,18 +9,13 @@ public class Goblinino : MonoBehaviour
     public Transform AiTarget;
     public Animator myAnimator;
     NavMeshAgent myAgent;
-    Rigidbody myRigidbody;
-
-    public int explosionForce;
-    public int explosionRadius;
-    public int explosionUpwardsModifier;
+ 
     
 
     // Start is called before the first frame update
     void Start()
     {
         myAgent = GetComponent<NavMeshAgent>();
-        myRigidbody = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -41,11 +36,6 @@ public class Goblinino : MonoBehaviour
             {
                 Debug.LogError("The animator is NULL");
             }
-        }
-
-        if (other.CompareTag("Explosive"))
-        {
-            myRigidbody.AddExplosionForce(explosionForce, other.transform.position, explosionRadius);
         }
     }
 }

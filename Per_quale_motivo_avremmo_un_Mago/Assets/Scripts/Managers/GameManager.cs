@@ -7,11 +7,11 @@ public class GameManager : MonoBehaviour
     public static GameManager Singleton;
 
     [Header("Grab Management")]
-    public SoulGrabbable leftHandSelectedObject;
-    public SoulGrabbable rightHandSelectedObject;
+    public Grabbable leftHandSelectedObject;
+    public Grabbable rightHandSelectedObject;
     [Space(20)]
-    public List<SoulGrabbable> leftHandGrabbedObjects;
-    public List<SoulGrabbable> rightHandGrabbedObjects;
+    public List<Grabbable> leftHandGrabbedObjects;
+    public List<Grabbable> rightHandGrabbedObjects;
 
     private void OnEnable()
     {
