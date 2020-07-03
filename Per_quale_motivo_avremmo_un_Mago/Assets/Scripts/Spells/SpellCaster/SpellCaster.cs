@@ -58,7 +58,7 @@ public class SpellCaster : MonoBehaviour
                 {
                     actualSpells[i].SpellCasted = true;
                     actualSpells[i].CastTheSpell();
-                    Destroy(gameObject, 1f);
+                    Destroy(gameObject);
                 }
             }
             yield return new WaitForFixedUpdate();

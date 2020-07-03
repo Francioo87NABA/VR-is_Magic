@@ -9,9 +9,13 @@ public class GrabBehaviour : MonoBehaviour
     SphereCollider myCollider;
     public float closeGrabDistance = 0.1f;
 
-   // Grabbable distanceGrabbableSoul;
+    public Transform wandTransform;
+    public Transform wandGrabOrientation;
+    public Transform wandReleasOrientation;
+    public float soulAttractionForce;
+
     Vector3 currentHand3dSpeed;
-    public float soulAttractionForce = 50f;
+
     Vector3 transformDirection;
 
     public bool isRightHand;
@@ -160,12 +164,12 @@ public class GrabBehaviour : MonoBehaviour
     {
         RaycastHit hit;
 
-        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity))
+        if (Physics.Raycast(wandTransform.position, wandTransform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity))
         {
             Grabbable tempGrabbable = hit.collider.gameObject.GetComponent<Grabbable>();
             if (tempGrabbable != null)
             {
-                Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.green);
+                Debug.DrawRay(wandTransform.position, wandTransform.TransformDirection(Vector3.forward) * hit.distance, Color.green);
                 actualGrabbableObject = tempGrabbable;
 
                 if (isRightHand)
@@ -188,7 +192,7 @@ public class GrabBehaviour : MonoBehaviour
                 {
                     GameManager.Singleton.leftHandSelectedObject = null;
                 }
-                Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.red);
+                Debug.DrawRay(wandTransform.position, wandTransform.TransformDirection(Vector3.forward) * hit.distance, Color.red);
             }
         }
         else
@@ -202,7 +206,7 @@ public class GrabBehaviour : MonoBehaviour
             {
                 GameManager.Singleton.leftHandSelectedObject = null;
             }
-            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 1000, Color.white);
+            Debug.DrawRay(wandTransform.position, wandTransform.TransformDirection(Vector3.forward) * 1000, Color.white);
         }
     }
     #endregion

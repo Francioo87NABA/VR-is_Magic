@@ -10,6 +10,8 @@ public class SpellManager : MonoBehaviour
 
     [Header("Maggie")]
     public bool celestialIsCasted;
+    public GameObject fireBall;
+    public Transform spellCasterCenter;
 
     private void OnEnable()
     {
@@ -24,6 +26,15 @@ public class SpellManager : MonoBehaviour
         {
             celestialIsCasted = true;
             mana -= 1;
+        }
+
+        if (spellToCast.spellName == "FireBall")
+        {
+            for (int i = 0; i < 1; i++)
+            {
+                Instantiate(fireBall, spellCasterCenter.position, spellCasterCenter.rotation);
+            }
+                
         }
     }
 }

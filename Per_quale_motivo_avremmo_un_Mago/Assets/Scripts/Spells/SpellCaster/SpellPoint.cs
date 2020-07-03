@@ -12,7 +12,5 @@ public class SpellPoint : MonoBehaviour
         {
             connectionToSpellCaster.AddSpellPointToSequence(this);
         }
-
-        
     }
 }

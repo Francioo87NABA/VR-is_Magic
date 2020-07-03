@@ -44,7 +44,7 @@ public class Grabbable : MonoBehaviour
 
     IEnumerator setConnectedGrabBehaviourEnumerator()
     {
-        yield return new WaitForSeconds(2);  //potrebbe causare errori con il rallentamento del tempo
+        yield return new WaitForSeconds(1);  //potrebbe causare errori con il rallentamento del tempo
         connectedGrabBehaviour = null;
         yield return null;
     }

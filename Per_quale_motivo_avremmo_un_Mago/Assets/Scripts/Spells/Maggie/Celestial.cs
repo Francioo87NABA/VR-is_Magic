@@ -8,9 +8,6 @@ public class Celestial : MonoBehaviour
     public float durataCelestial = 8f;
     public float rallentamentoDelTempo = 0.8f;
     public bool celestial;
-    private int i = 1;
-
-
 
     void Update()
     {

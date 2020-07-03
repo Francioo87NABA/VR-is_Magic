@@ -18,11 +18,18 @@ public class InputManager : MonoBehaviour
     [Space(20)]
     public SteamVR_Action_Boolean grabAction = SteamVR_Input.GetAction<SteamVR_Action_Boolean>("GrabGrip");
     public SteamVR_Action_Boolean pullAction = SteamVR_Input.GetAction<SteamVR_Action_Boolean>("GrabPinch");
+    public SteamVR_Action_Boolean spellAction = SteamVR_Input.GetAction<SteamVR_Action_Boolean>("RightClick");
 
     [Header("Input Events")]
     public UnityEvent grabEvent;
     public UnityEvent grabReleasEvent;
     public UnityEvent pullEvent;
+    public UnityEvent spellEvent;
+
+    [Header("SpellCaster")]
+    public Transform rightHandTransform;
+    public Transform rightHandInstantiationTransform;
+    public GameObject spellCaster;
 
     //[Header("Input Bools")]
     //public bool SoulGrabBool;
@@ -44,9 +51,7 @@ public class InputManager : MonoBehaviour
     {
         if (grabAction.GetStateDown(rightHand.handType))
         {
-            Debug.Log("eureca");
-            grabEvent.Invoke();
-            
+            grabEvent.Invoke();   
         }
         
         if (grabAction.GetStateUp(rightHand.handType))
@@ -57,6 +62,16 @@ public class InputManager : MonoBehaviour
         if (pullAction.GetStateDown(rightHand.handType))
         {
             pullEvent.Invoke();
+        }
+
+        if (spellAction.GetStateDown(rightHand.handType))
+        {
+            for (int i = 0; i < 1; i++)
+            {
+                rightHandInstantiationTransform.rotation = rightHandTransform.rotation;
+
+                Instantiate(spellCaster, rightHandInstantiationTransform.position, Quaternion.Euler(0, rightHandInstantiationTransform.eulerAngles.y, 0));
+            }
         }
     }
 }
