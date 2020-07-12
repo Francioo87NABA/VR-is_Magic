@@ -6,6 +6,7 @@ public class Grabbable : MonoBehaviour
 {
     public Rigidbody myRigidbody;
     public bool rotateToOriginWhenGrabbed;
+    public bool IsThisAWand;
 
     [HideInInspector]
     public GrabBehaviour connectedGrabBehaviour;

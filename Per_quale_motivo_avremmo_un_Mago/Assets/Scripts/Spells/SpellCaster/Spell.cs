@@ -6,13 +6,13 @@ public class Spell : MonoBehaviour
 {
     public string spellName;
     public SpellPoint[] spellPointsSequence;
-    public bool SpellCasted = true;
+    public bool SpellCasted;
 
     public void CastTheSpell()
     {
         if (SpellManager.Singleton != null)
         {
-            SpellManager.Singleton.CastTheSpell(this);
+            SpellManager.Singleton.CastTheSpell(this);           
         }
     }
 }

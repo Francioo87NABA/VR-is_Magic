@@ -28,7 +28,9 @@ public class InputManager : MonoBehaviour
 
     [Header("SpellCaster")]
     public Transform rightHandTransform;
+    public Transform leftHandTransform;
     public Transform rightHandInstantiationTransform;
+    public Transform leftHandInstantiationTransform;
     public GameObject spellCaster;
 
     //[Header("Input Bools")]
@@ -53,16 +55,30 @@ public class InputManager : MonoBehaviour
         {
             grabEvent.Invoke();   
         }
-        
+        if (grabAction.GetStateDown(leftHand.handType))
+        {
+            grabEvent.Invoke();
+        }
+
         if (grabAction.GetStateUp(rightHand.handType))
         {   
             grabReleasEvent.Invoke();
         }
+        if (grabAction.GetStateUp(leftHand.handType))
+        {
+            grabReleasEvent.Invoke();
+        }
+
 
         if (pullAction.GetStateDown(rightHand.handType))
         {
             pullEvent.Invoke();
         }
+        if (pullAction.GetStateDown(leftHand.handType))
+        {
+            pullEvent.Invoke();
+        }
+
 
         if (spellAction.GetStateDown(rightHand.handType))
         {
@@ -71,6 +87,15 @@ public class InputManager : MonoBehaviour
                 rightHandInstantiationTransform.rotation = rightHandTransform.rotation;
 
                 Instantiate(spellCaster, rightHandInstantiationTransform.position, Quaternion.Euler(0, rightHandInstantiationTransform.eulerAngles.y, 0));
+            }
+        }
+        if (spellAction.GetStateDown(leftHand.handType))
+        {
+            for (int i = 0; i < 1; i++)
+            {
+                leftHandInstantiationTransform.rotation = leftHandTransform.rotation;
+
+                Instantiate(spellCaster, leftHandInstantiationTransform.position, Quaternion.Euler(0, leftHandInstantiationTransform.eulerAngles.y, 0));
             }
         }
     }

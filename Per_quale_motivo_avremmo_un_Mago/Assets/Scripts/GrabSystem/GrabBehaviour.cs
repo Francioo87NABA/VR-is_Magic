@@ -9,13 +9,14 @@ public class GrabBehaviour : MonoBehaviour
     SphereCollider myCollider;
     public float closeGrabDistance = 0.1f;
 
-    public Transform wandTransform;
-    public Transform wandGrabOrientation;
+    public Transform GrabOrientation;
+
+    public Transform wand;
+    public Transform wandRayTransform;
     public Transform wandReleasOrientation;
     public float soulAttractionForce;
 
     Vector3 currentHand3dSpeed;
-
     Vector3 transformDirection;
 
     public bool isRightHand;
@@ -67,10 +68,10 @@ public class GrabBehaviour : MonoBehaviour
             grabbableInHand[i].myRigidbody.isKinematic = true;
             grabbableInHand[i].transform.parent = transform;
 
-            if (grabbableInHand[i].rotateToOriginWhenGrabbed)
+            if (grabbableInHand[i].IsThisAWand)
             {
-                grabbableInHand[i].transform.localPosition = Vector3.zero;
-                grabbableInHand[i].transform.localRotation = Quaternion.identity;
+                grabbableInHand[i].transform.position = GrabOrientation.position;
+                grabbableInHand[i].transform.rotation = GrabOrientation.rotation;
 
             }
             if (isRightHand)
@@ -100,10 +101,18 @@ public class GrabBehaviour : MonoBehaviour
 
         for (int i = 0; i < grabbableInHand.Count; i++)
         {
+        
             grabbableInHand[i].transform.parent = null;
             grabbableInHand[i].myRigidbody.isKinematic = false;
             grabbableInHand[i].myRigidbody.velocity = currentHand3dSpeed;
             grabbableInHand[i].myRigidbody.AddTorque(currentHandRotation);
+
+            if (grabbableInHand[i].IsThisAWand)
+            {
+                grabbableInHand[i].transform.parent = null;
+                grabbableInHand[i].myRigidbody.isKinematic = false;
+                StartCoroutine(WandReturn());
+            }
 
             if (isRightHand)
             {
@@ -120,6 +129,14 @@ public class GrabBehaviour : MonoBehaviour
                 }
             }
         }
+    }
+
+    IEnumerator WandReturn()
+    {
+        yield return new WaitForSeconds(5f);
+        wand.GetComponent<Rigidbody>().isKinematic = true;
+        wand.transform.rotation = wandReleasOrientation.rotation;
+        wand.transform.position = wandReleasOrientation.position;
     }
 
     void PullObject()
@@ -164,12 +181,12 @@ public class GrabBehaviour : MonoBehaviour
     {
         RaycastHit hit;
 
-        if (Physics.Raycast(wandTransform.position, wandTransform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity))
+        if (Physics.Raycast(wandRayTransform.position, wandRayTransform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity))
         {
             Grabbable tempGrabbable = hit.collider.gameObject.GetComponent<Grabbable>();
             if (tempGrabbable != null)
             {
-                Debug.DrawRay(wandTransform.position, wandTransform.TransformDirection(Vector3.forward) * hit.distance, Color.green);
+                Debug.DrawRay(wandRayTransform.position, wandRayTransform.TransformDirection(Vector3.forward) * hit.distance, Color.green);
                 actualGrabbableObject = tempGrabbable;
 
                 if (isRightHand)
@@ -192,7 +209,7 @@ public class GrabBehaviour : MonoBehaviour
                 {
                     GameManager.Singleton.leftHandSelectedObject = null;
                 }
-                Debug.DrawRay(wandTransform.position, wandTransform.TransformDirection(Vector3.forward) * hit.distance, Color.red);
+                Debug.DrawRay(wandRayTransform.position, wandRayTransform.TransformDirection(Vector3.forward) * hit.distance, Color.red);
             }
         }
         else
@@ -206,7 +223,7 @@ public class GrabBehaviour : MonoBehaviour
             {
                 GameManager.Singleton.leftHandSelectedObject = null;
             }
-            Debug.DrawRay(wandTransform.position, wandTransform.TransformDirection(Vector3.forward) * 1000, Color.white);
+            Debug.DrawRay(wandRayTransform.position, wandRayTransform.TransformDirection(Vector3.forward) * 1000, Color.white);
         }
     }
     #endregion
