@@ -13,6 +13,7 @@ public class SpellManager : MonoBehaviour
     public GameObject fireBall;
     public Transform rightHandInstantiationTransform;
     public Transform leftHandInstantiationTransform;
+    public Transform spellManager;
 
     private void OnEnable()
     {
@@ -33,7 +34,7 @@ public class SpellManager : MonoBehaviour
         {
             for (int i = 0; i < 1; i++)
             {
-                Instantiate(fireBall, rightHandInstantiationTransform.position, rightHandInstantiationTransform.rotation);
+                Instantiate(fireBall, spellToCast.transform.position, spellToCast.transform.rotation);
             }     
         }
     }

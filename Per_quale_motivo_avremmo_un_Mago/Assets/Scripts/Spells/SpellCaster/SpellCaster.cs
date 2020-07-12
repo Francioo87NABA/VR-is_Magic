@@ -55,9 +55,10 @@ public class SpellCaster : MonoBehaviour
                     }
                 }
                 if (tempSpellCasted == true)
-                {            
+                {
+                    actualSpells[i].transform.position = transform.position;
                     actualSpells[i].SpellCasted = true;                
-                    actualSpells[i].CastTheSpell();                   
+                    actualSpells[i].CastTheSpell();
                     Destroy(gameObject);
                 }
             }
