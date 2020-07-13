@@ -21,7 +21,7 @@ public class SpellCaster : MonoBehaviour
 
     void Update()
     {
-        
+
     }
 
     public void AddSpellPointToSequence(SpellPoint spellPointToAdd)
@@ -59,9 +59,10 @@ public class SpellCaster : MonoBehaviour
                     actualSpells[i].transform.position = transform.position;
                     actualSpells[i].SpellCasted = true;                
                     actualSpells[i].CastTheSpell();
+                    InputManager.Singleton.oneTime = 0;
                     Destroy(gameObject);
                 }
-            }
+            }          
             yield return new WaitForFixedUpdate();
         }
     }

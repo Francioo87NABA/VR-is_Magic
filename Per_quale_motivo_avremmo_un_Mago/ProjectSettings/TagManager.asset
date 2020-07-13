@@ -8,6 +8,7 @@ TagManager:
   - Ground
   - Enemy
   - Hand
+  - Wand
   layers:
   - Default
   - TransparentFX

@@ -72,7 +72,15 @@ public class GrabBehaviour : MonoBehaviour
             {
                 grabbableInHand[i].transform.position = GrabOrientation.position;
                 grabbableInHand[i].transform.rotation = GrabOrientation.rotation;
-                InputManager.Singleton.wandInHand = true;
+                InputManager.Singleton.wandInHands = true;
+                if (isRightHand)
+                {
+                    InputManager.Singleton.wandInRightHand = true;
+                }
+                else
+                {
+                    InputManager.Singleton.wandInLeftHand = true;
+                }
 
             }
             if (isRightHand)
@@ -110,7 +118,9 @@ public class GrabBehaviour : MonoBehaviour
 
             if (grabbableInHand[i].IsThisAWand)
             {
-                InputManager.Singleton.wandInHand = false;
+                InputManager.Singleton.wandInHands = false;
+                InputManager.Singleton.wandInRightHand = false;
+                InputManager.Singleton.wandInLeftHand = false;
                 grabbableInHand[i].transform.parent = null;
                 grabbableInHand[i].myRigidbody.isKinematic = false;
                 StartCoroutine(WandReturn());

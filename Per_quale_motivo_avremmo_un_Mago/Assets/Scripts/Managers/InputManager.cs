@@ -22,7 +22,10 @@ public class InputManager : MonoBehaviour
     public Transform leftHandInstantiationTransform;
     public GameObject handSpellCaster;
     public GameObject wandSpellCaster;
-    public bool wandInHand;
+    public bool wandInHands;
+    public bool wandInRightHand;
+    public bool wandInLeftHand;
+    public int oneTime;
 
     [Header("SteamVR References")]
     public Transform head;
@@ -67,51 +70,75 @@ public class InputManager : MonoBehaviour
         }
 
 
-        if (pullAction.GetStateDown(rightHand.handType) && wandInHand)
+        if (pullAction.GetStateDown(rightHand.handType) && wandInHands)
         {
             pullEvent.Invoke();
         }
-        if (pullAction.GetStateDown(leftHand.handType) && wandInHand)
+        if (pullAction.GetStateDown(leftHand.handType) && wandInHands)
         {
             pullEvent.Invoke();
         }
 
 
-        if (spellAction.GetStateDown(rightHand.handType) && wandInHand == false)
+        if (spellAction.GetStateDown(rightHand.handType) && oneTime == 0)
         {
-            for (int i = 0; i < 1; i++)
+            if (wandInHands == false)
             {
                 rightHandInstantiationTransform.rotation = rightHandTransform.rotation;
 
                 Instantiate(handSpellCaster, rightHandInstantiationTransform.position, Quaternion.Euler(0, rightHandInstantiationTransform.eulerAngles.y, 0));
+
+                oneTime = 1;
             }
-        }
-        else if (spellAction.GetStateDown(rightHand.handType) && wandInHand)
-        {
-            for (int i = 0; i < 1; i++)
+            else
             {
-                rightHandInstantiationTransform.rotation = rightHandTransform.rotation;
+                if (wandInRightHand)
+                {
+                    rightHandInstantiationTransform.rotation = rightHandTransform.rotation;
 
-                Instantiate(wandSpellCaster, rightHandInstantiationTransform.position, Quaternion.Euler(0, rightHandInstantiationTransform.eulerAngles.y, 0));
+                    Instantiate(wandSpellCaster, rightHandInstantiationTransform.position, Quaternion.Euler(0, rightHandInstantiationTransform.eulerAngles.y, 0));
+
+                    oneTime = 1;
+                }
+                else
+                {
+                    rightHandInstantiationTransform.rotation = rightHandTransform.rotation;
+
+                    Instantiate(handSpellCaster, rightHandInstantiationTransform.position, Quaternion.Euler(0, rightHandInstantiationTransform.eulerAngles.y, 0));
+
+                    oneTime = 1;
+                }
             }
-        }
+        }      
 
-        if (spellAction.GetStateDown(leftHand.handType) && wandInHand == false)
+        if (spellAction.GetStateDown(leftHand.handType) && oneTime == 0)
         {
-            for (int i = 0; i < 1; i++)
+            if (wandInHands == false)
             {
                 leftHandInstantiationTransform.rotation = leftHandTransform.rotation;
 
                 Instantiate(handSpellCaster, leftHandInstantiationTransform.position, Quaternion.Euler(0, leftHandInstantiationTransform.eulerAngles.y, 0));
-            }
-        }
-        else if (spellAction.GetStateDown(leftHand.handType) && wandInHand)
-        {
-            for (int i = 0; i < 1; i++)
-            {
-                leftHandInstantiationTransform.rotation = leftHandTransform.rotation;
 
-                Instantiate(wandSpellCaster, leftHandInstantiationTransform.position, Quaternion.Euler(0, leftHandInstantiationTransform.eulerAngles.y, 0));
+                oneTime = 1;
+            }
+            else
+            {
+                if (wandInLeftHand) 
+                {
+                    leftHandInstantiationTransform.rotation = leftHandTransform.rotation;
+
+                    Instantiate(wandSpellCaster, leftHandInstantiationTransform.position, Quaternion.Euler(0, leftHandInstantiationTransform.eulerAngles.y, 0));
+
+                    oneTime = 1;
+                }
+                else
+                {
+                    leftHandInstantiationTransform.rotation = leftHandTransform.rotation;
+
+                    Instantiate(handSpellCaster, leftHandInstantiationTransform.position, Quaternion.Euler(0, leftHandInstantiationTransform.eulerAngles.y, 0));
+
+                    oneTime = 1;
+                }
             }
         }
     }
