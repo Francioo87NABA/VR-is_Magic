@@ -37,5 +37,11 @@ public class Goblinino : MonoBehaviour
                 Debug.LogError("The animator is NULL");
             }
         }
+
+        if (other.CompareTag("Magia"))
+        {
+            Destroy(other.gameObject);
+            Destroy(gameObject);
+        }
     }
 }

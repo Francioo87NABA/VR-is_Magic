@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 using Valve.VR;
 using Valve.VR.InteractionSystem;
 
@@ -26,6 +27,8 @@ public class InputManager : MonoBehaviour
     public bool wandInRightHand;
     public bool wandInLeftHand;
     public int oneTime;
+
+    public bool gameOver;
 
     [Header("SteamVR References")]
     public Transform head;
@@ -140,6 +143,11 @@ public class InputManager : MonoBehaviour
                     oneTime = 1;
                 }
             }
+        }
+
+        if (gameOver == true)
+        {
+            SceneManager.LoadScene(0);
         }
     }
 }

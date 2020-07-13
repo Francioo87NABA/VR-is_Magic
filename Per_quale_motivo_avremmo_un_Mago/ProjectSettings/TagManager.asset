@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Hand
   - Wand
+  - Magia
   layers:
   - Default
   - TransparentFX

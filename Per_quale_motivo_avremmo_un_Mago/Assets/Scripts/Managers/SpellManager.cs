@@ -6,14 +6,19 @@ public class SpellManager : MonoBehaviour
 {
     public static SpellManager Singleton;
 
+
     public int mana = 3;
+
+    public Transform rightHandInstantiationTransform;
+    public Transform leftHandInstantiationTransform;
 
     [Header("Maggie")]
     public bool celestialIsCasted;
     public GameObject fireBall;
-    public Transform rightHandInstantiationTransform;
-    public Transform leftHandInstantiationTransform;
-    public Transform spellManager;
+    public GameObject muroEtereo;
+    public Transform muroEtereoInstantiationTransform;
+
+    //public Transform spellManager;
 
     private void OnEnable()
     {
@@ -36,6 +41,12 @@ public class SpellManager : MonoBehaviour
             {
                 Instantiate(fireBall, spellToCast.transform.position, spellToCast.transform.rotation);
             }     
+        }
+
+        if (spellToCast.spellName == "MuroEtereo")
+        {
+            Instantiate(muroEtereo, muroEtereoInstantiationTransform.position, muroEtereoInstantiationTransform.rotation);
+            Debug.Log("unavolta");
         }
     }
 }
