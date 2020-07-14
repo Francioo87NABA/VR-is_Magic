@@ -16,32 +16,37 @@ public class Goblinino : MonoBehaviour
     void Start()
     {
         myAgent = GetComponent<NavMeshAgent>();
+        myAgent.SetDestination(AiTarget.position);
     }
 
     // Update is called once per frame
     void Update()
     {
-        myAgent.SetDestination(AiTarget.position);
+     
     }
+
+
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Portone"))
         {
-            if (myAnimator != null)
-            {
-                myAnimator.SetBool("Attack", true);
-            }
-            else
-            {
-                Debug.LogError("The animator is NULL");
-            }
+            myAnimator.SetBool("Attack", true);
         }
 
         if (other.CompareTag("Magia"))
         {
             Destroy(other.gameObject);
             Destroy(gameObject);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Portone"))
+        {
+            myAnimator.SetBool("Attack", false);
+            myAgent.SetDestination(AiTarget.position);
         }
     }
 }

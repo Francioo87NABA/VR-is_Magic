@@ -85,25 +85,9 @@ public class InputManager : MonoBehaviour
 
         if (spellAction.GetStateDown(rightHand.handType) && oneTime == 0)
         {
-            if (wandInHands == false)
+            if ( handSpellCaster != null)
             {
-                rightHandInstantiationTransform.rotation = rightHandTransform.rotation;
-
-                Instantiate(handSpellCaster, rightHandInstantiationTransform.position, Quaternion.Euler(0, rightHandInstantiationTransform.eulerAngles.y, 0));
-
-                oneTime = 1;
-            }
-            else
-            {
-                if (wandInRightHand)
-                {
-                    rightHandInstantiationTransform.rotation = rightHandTransform.rotation;
-
-                    Instantiate(wandSpellCaster, rightHandInstantiationTransform.position, Quaternion.Euler(0, rightHandInstantiationTransform.eulerAngles.y, 0));
-
-                    oneTime = 1;
-                }
-                else
+                if (wandInHands == false)
                 {
                     rightHandInstantiationTransform.rotation = rightHandTransform.rotation;
 
@@ -111,6 +95,29 @@ public class InputManager : MonoBehaviour
 
                     oneTime = 1;
                 }
+                else
+                {
+                    if (wandInRightHand)
+                    {
+                        rightHandInstantiationTransform.rotation = rightHandTransform.rotation;
+
+                        Instantiate(wandSpellCaster, rightHandInstantiationTransform.position, Quaternion.Euler(0, rightHandInstantiationTransform.eulerAngles.y, 0));
+
+                        oneTime = 1;
+                    }
+                    else
+                    {
+                        rightHandInstantiationTransform.rotation = rightHandTransform.rotation;
+
+                        Instantiate(handSpellCaster, rightHandInstantiationTransform.position, Quaternion.Euler(0, rightHandInstantiationTransform.eulerAngles.y, 0));
+
+                        oneTime = 1;
+                    }
+                }
+            }
+            else
+            {
+                Debug.LogError("HandSpellCasterIsNUll");
             }
         }      
 

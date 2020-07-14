@@ -19,6 +19,8 @@ public class MuroEtereo : MonoBehaviour
     {
         if (vita <= 0)
         {
+            Vector3 ofset = new Vector3(0, 100, 0);
+            transform.position = transform.position - ofset;
             Destroy(gameObject);
         }
     }

@@ -46,7 +46,7 @@ public class SpellManager : MonoBehaviour
         if (spellToCast.spellName == "MuroEtereo")
         {
             Instantiate(muroEtereo, muroEtereoInstantiationTransform.position, muroEtereoInstantiationTransform.rotation);
-            Debug.Log("unavolta");
+            Debug.Log("unavolta");  
         }
     }
 }

@@ -10,8 +10,13 @@ public class SpellCaster : MonoBehaviour
 
     void Start()
     {
+        InputManager.Singleton.handSpellCaster = this.gameObject;
+
         actualSpells = GetComponents<Spell>();
+
         StartCoroutine(CeckForSpells());
+
+        StartCoroutine(Autodistruzione());
 
         for (int i = 0; i < allSpellPoints.Length; i++)
         {
@@ -65,5 +70,11 @@ public class SpellCaster : MonoBehaviour
             }          
             yield return new WaitForFixedUpdate();
         }
+    }
+
+    IEnumerator Autodistruzione()
+    {
+        yield return new WaitForSecondsRealtime(4f);
+        Destroy(gameObject);
     }
 }
