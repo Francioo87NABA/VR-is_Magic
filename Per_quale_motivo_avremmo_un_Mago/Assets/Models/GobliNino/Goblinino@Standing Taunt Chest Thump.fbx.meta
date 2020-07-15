@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: 4fd18bee2e6cb0c46b0cdfa43194e9a6
+guid: cc1d8865370ede64ba430174e499d5e1
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable:
   - first:
       74: -203655887218126122
-    second: Taunt2
+    second: Taunt
   externalObjects: {}
   materials:
     materialImportMode: 1
@@ -35,7 +35,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Taunt2
+      name: Taunt
       takeName: mixamo.com
       internalID: 0
       firstFrame: 0

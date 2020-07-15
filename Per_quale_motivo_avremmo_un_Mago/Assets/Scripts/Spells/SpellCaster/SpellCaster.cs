@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class SpellCaster : MonoBehaviour
 {
+
     Spell[] actualSpells;
     public SpellPoint[] allSpellPoints;
     public List<SpellPoint> actualSpellPointsSequence = new List<SpellPoint>();
 
     void Start()
     {
-        InputManager.Singleton.cashedHandSpellCaster = this.gameObject;
+        InputManager.Singleton.cashedSpellCaster = this.gameObject;
 
         actualSpells = GetComponents<Spell>();
 

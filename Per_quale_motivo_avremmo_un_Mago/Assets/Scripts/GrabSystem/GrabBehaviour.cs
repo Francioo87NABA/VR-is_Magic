@@ -13,7 +13,7 @@ public class GrabBehaviour : MonoBehaviour
 
     public Transform wand;
     public Transform wandRayTransform;
-    public Transform wandReleasOrientation;
+    public Transform beltTransform;
     public float soulAttractionForce;
 
     Vector3 currentHand3dSpeed;
@@ -72,6 +72,7 @@ public class GrabBehaviour : MonoBehaviour
                 grabbableInHand[i].transform.position = GrabOrientation.position;
                 grabbableInHand[i].transform.rotation = GrabOrientation.rotation;
                 InputManager.Singleton.wandInHands = true;
+
                 if (isRightHand)
                 {
                     InputManager.Singleton.wandInRightHand = true;
@@ -145,9 +146,18 @@ public class GrabBehaviour : MonoBehaviour
     IEnumerator WandReturn()
     {
         yield return new WaitForSeconds(5f);
-        wand.GetComponent<Rigidbody>().isKinematic = true;
-        wand.transform.rotation = wandReleasOrientation.rotation;
-        wand.transform.position = wandReleasOrientation.position;
+
+        if (InputManager.Singleton.wandInHands == false)
+        {
+            wand.GetComponent<Rigidbody>().isKinematic = true;
+            wand.transform.rotation = beltTransform.rotation;
+            wand.transform.position = beltTransform.position;
+        }
+        else
+        {
+            ;
+        }
+       
     }
 
     void PullObject()

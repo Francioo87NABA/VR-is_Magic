@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: 4fd18bee2e6cb0c46b0cdfa43194e9a6
+guid: 0f7899e60c6feb3469a690b568c6a137
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable:
   - first:
       74: -203655887218126122
-    second: Taunt2
+    second: Combo Attack
   externalObjects: {}
   materials:
     materialImportMode: 1
@@ -35,11 +35,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Taunt2
+      name: Combo Attack
       takeName: mixamo.com
       internalID: 0
       firstFrame: 0
-      lastFrame: 85
+      lastFrame: 82
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

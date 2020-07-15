@@ -21,11 +21,9 @@ public class Portone : MonoBehaviour
     {
         if (vita <= 0)
         {
-            Vector3 ofset = new Vector3(0, 0, 100);
-            padre.transform.position = padre.transform.position - ofset;
-            transform.position = transform.position - ofset;
             SpawnManager.Singleton.stopSpawning = true;
             //InputManager.Singleton.gameOver = true;
+            Destroy(padre);
             Destroy(gameObject);
         }
     }

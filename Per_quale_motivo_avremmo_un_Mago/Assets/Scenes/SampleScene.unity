@@ -267,8 +267,11 @@ MonoBehaviour:
   leftHandTransform: {fileID: 2129925926}
   rightHandInstantiationTransform: {fileID: 738735677}
   leftHandInstantiationTransform: {fileID: 326929345}
-  handSpellCaster: {fileID: 0}
-  wandSpellCaster: {fileID: 4536233003162682337}
+  handSpellCaster: {fileID: 7487578007755611435, guid: 9103f9816876a584292a74646c741431,
+    type: 3}
+  wandSpellCaster: {fileID: 1589485503038676214, guid: 004d9ded333537341852b0b2ee1edc19,
+    type: 3}
+  cashedSpellCaster: {fileID: 0}
   wandInHands: 0
   wandInRightHand: 0
   wandInLeftHand: 0
@@ -391,7 +394,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 58800286}
   m_LocalRotation: {x: -0, y: -0.098730884, z: -0, w: 0.9951142}
-  m_LocalPosition: {x: 6.639, y: 6.27, z: 1.245}
+  m_LocalPosition: {x: 5.913, y: 6.27, z: 1.1}
   m_LocalScale: {x: 0.03635111, y: 0.031189987, z: 0.2924767}
   m_Children:
   - {fileID: 1006952137}
@@ -682,7 +685,7 @@ MonoBehaviour:
   GrabOrientation: {fileID: 948964713}
   wand: {fileID: 58800291}
   wandRayTransform: {fileID: 1006952137}
-  wandReleasOrientation: {fileID: 1827909318}
+  beltTransform: {fileID: 1827909318}
   soulAttractionForce: 10
   isRightHand: 0
   currentHandRotation: {x: 0, y: 0, z: 0}
@@ -2749,8 +2752,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.4366202, y: 2.6243355, z: 1.295671}
-  m_Center: {x: 0.06757269, y: -0.18424845, z: 0.14783469}
+  m_Size: {x: 2.5918186, y: 2.6243355, z: 0.5178301}
+  m_Center: {x: 0.043757606, y: -0.18424845, z: 0.02766366}
 --- !u!4 &1265043149 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4531992052556588, guid: 88e7d32d0b5d2d940b4cdadb5e4dde5f,
@@ -3698,7 +3701,7 @@ MonoBehaviour:
   GrabOrientation: {fileID: 1584552324}
   wand: {fileID: 58800291}
   wandRayTransform: {fileID: 1006952137}
-  wandReleasOrientation: {fileID: 1827909318}
+  beltTransform: {fileID: 1827909318}
   soulAttractionForce: 10
   isRightHand: 1
   currentHandRotation: {x: 0, y: 0, z: 0}
@@ -4090,7 +4093,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1827909318}
   m_Layer: 0
-  m_Name: WandReleasOrientation
+  m_Name: BeltTransform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4103,13 +4106,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1827909317}
-  m_LocalRotation: {x: -0.0007175198, y: -0, z: -0, w: 0.99999976}
-  m_LocalPosition: {x: -0.54, y: 0.742, z: 0.035}
+  m_LocalRotation: {x: -0, y: -0.17595074, z: -0, w: 0.984399}
+  m_LocalPosition: {x: -0.335, y: 0.88499975, z: 0.017}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2130020232}
   m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: -0.082, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -20.268002, z: 0}
 --- !u!4 &1864661200 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4531992052556588, guid: 88e7d32d0b5d2d940b4cdadb5e4dde5f,
@@ -7819,12 +7822,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
---- !u!1 &4536233003162682337 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1589485503038676214, guid: 004d9ded333537341852b0b2ee1edc19,
-    type: 3}
-  m_PrefabInstance: {fileID: 2953538118296968983}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6279184938856321359
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8027,6 +8024,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 583888369}
     m_Modifications:
+    - target: {fileID: 1445317120, guid: 8a43fc166be451448accf367f121a5aa, type: 3}
+      propertyPath: m_Radius
+      value: 0.333666
+      objectReference: {fileID: 0}
+    - target: {fileID: 1445317120, guid: 8a43fc166be451448accf367f121a5aa, type: 3}
+      propertyPath: m_Center.x
+      value: -0.036295235
+      objectReference: {fileID: 0}
+    - target: {fileID: 1445317120, guid: 8a43fc166be451448accf367f121a5aa, type: 3}
+      propertyPath: m_Center.z
+      value: 0.020112932
+      objectReference: {fileID: 0}
     - target: {fileID: 8443765450401587224, guid: 8a43fc166be451448accf367f121a5aa,
         type: 3}
       propertyPath: m_Name
@@ -8037,6 +8046,11 @@ PrefabInstance:
       propertyPath: AiTarget
       value: 
       objectReference: {fileID: 364386835}
+    - target: {fileID: 8443765450401587229, guid: 8a43fc166be451448accf367f121a5aa,
+        type: 3}
+      propertyPath: portone
+      value: 
+      objectReference: {fileID: 1237837424}
     - target: {fileID: 8443765450401587230, guid: 8a43fc166be451448accf367f121a5aa,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8045,7 +8059,7 @@ PrefabInstance:
     - target: {fileID: 8443765450401587230, guid: 8a43fc166be451448accf367f121a5aa,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.744
+      value: -2.609
       objectReference: {fileID: 0}
     - target: {fileID: 8443765450401587230, guid: 8a43fc166be451448accf367f121a5aa,
         type: 3}
