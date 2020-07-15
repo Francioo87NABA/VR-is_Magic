@@ -7,11 +7,11 @@ using UnityEngine.AI;
 public class Goblinino : MonoBehaviour
 {
     public Transform AiTarget;
-    public Animator myAnimator;
-    NavMeshAgent myAgent;
- 
     
 
+    public Animator myAnimator;
+    NavMeshAgent myAgent;
+  
     // Start is called before the first frame update
     void Start()
     {
@@ -22,16 +22,25 @@ public class Goblinino : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-     
+    
     }
 
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Portone"))
+        {
+            Transform portone = other.GetComponent<Transform>();
+            myAgent.SetDestination(portone.position);
+            myAnimator.SetBool("Attack", true);
+        }
+    }
 
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Portone"))
+        if (other.CompareTag("Target"))
         {
-            myAnimator.SetBool("Attack", true);
+            myAnimator.SetBool("Idle", true);
         }
 
         if (other.CompareTag("Magia"))
