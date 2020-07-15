@@ -10,7 +10,7 @@ public class SpellCaster : MonoBehaviour
 
     void Start()
     {
-        InputManager.Singleton.handSpellCaster = this.gameObject;
+        InputManager.Singleton.cashedHandSpellCaster = this.gameObject;
 
         actualSpells = GetComponents<Spell>();
 
@@ -75,6 +75,7 @@ public class SpellCaster : MonoBehaviour
     IEnumerator Autodistruzione()
     {
         yield return new WaitForSecondsRealtime(4f);
+        InputManager.Singleton.oneTime = 0;
         Destroy(gameObject);
     }
 }

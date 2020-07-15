@@ -35,7 +35,6 @@ public class GrabBehaviour : MonoBehaviour
     {
         SetUpTrigger();
 
-
         StartCoroutine(CalculateTransformSpeedEnumerator());
         StartCoroutine(CalculateTransformRotationEnumerator());
 

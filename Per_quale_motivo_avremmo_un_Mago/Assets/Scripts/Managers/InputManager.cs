@@ -22,6 +22,7 @@ public class InputManager : MonoBehaviour
     public Transform rightHandInstantiationTransform;
     public Transform leftHandInstantiationTransform;
     public GameObject handSpellCaster;
+    public GameObject cashedHandSpellCaster;
     public GameObject wandSpellCaster;
     public bool wandInHands;
     public bool wandInRightHand;

@@ -5,11 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Portone
-  - Ground
   - Enemy
   - Hand
   - Wand
   - Magia
+  - Arma
+  - Target
   layers:
   - Default
   - TransparentFX
