@@ -11,6 +11,7 @@ public class SpawnManager : MonoBehaviour
     [Header("Enemy")]
     public GameObject enemyContainer;
     public GameObject nino;
+    public bool aspetta;
 
     public bool stopSpawning;
 

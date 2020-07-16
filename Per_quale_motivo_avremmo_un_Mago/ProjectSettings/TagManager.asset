@@ -11,6 +11,7 @@ TagManager:
   - Magia
   - Arma
   - Target
+  - PuntoDAttesa
   layers:
   - Default
   - TransparentFX
