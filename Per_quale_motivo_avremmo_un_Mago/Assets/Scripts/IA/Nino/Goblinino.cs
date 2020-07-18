@@ -15,9 +15,6 @@ public class Goblinino : MonoBehaviour
     float minTimer = 5;
     float maxTimer = 20;
     float actualTimer = 1;
-    float minTimerWalck = 1;
-    float maxTimerWalck = 3;
-    float actualTimerWalck = 1;
 
     bool seiInIdle;
     bool aspettateSoloVoi;
@@ -72,30 +69,17 @@ public class Goblinino : MonoBehaviour
             {
                 myAgent.SetDestination(transform.position);
                 myAnimator.SetBool("Idle", true);
-
-                int rnd = Random.Range(1, 4);
-                actualTimer = rnd;
-                if (actualTimer <= 0)
-                {
-                    Debug.Log("taunt");
-                    int RandomTaunt = Random.Range(0, tauntTriggers.Length);
-                    string tauntTrigger = tauntTriggers[RandomTaunt];
-                    myAnimator.SetTrigger(tauntTrigger);
-
-                    actualTimer = Random.Range(minTimer, maxTimer);
-                }
-                else if (actualTimer > 0)
-                {
-                    actualTimer -= Time.deltaTime;
-                }
+                seiInIdle = true;
             }
             else if (SpawnManager.Singleton.aspetta == false && portone != null)
             {
+                seiInIdle = false;
                 myAnimator.SetBool("Idle", false);
                 myAgent.SetDestination(AiTarget.position);
             }
             else if (portone == null)
             {
+                seiInIdle = false;
                 myAnimator.SetBool("Idle", false);
                 myAgent.SetDestination(AiTarget.position);
             }

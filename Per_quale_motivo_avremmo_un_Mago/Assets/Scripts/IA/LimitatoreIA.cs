@@ -8,7 +8,7 @@ public class LimitatoreIA : MonoBehaviour
 
     void Update()
     {
-        if (goblininos.Count >= 2)
+        if (goblininos.Count >= 3)
         {
             SpawnManager.Singleton.aspetta = true;
         }
