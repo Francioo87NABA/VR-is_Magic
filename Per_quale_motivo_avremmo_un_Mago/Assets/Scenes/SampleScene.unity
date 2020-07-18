@@ -355,6 +355,7 @@ MonoBehaviour:
   wandInRightHand: 0
   wandInLeftHand: 0
   oneTime: 0
+  teletrasportatiQui: {fileID: 0}
   gameOver: 0
   head: {fileID: 2130033052}
   leftHand: {fileID: 2120082834}
@@ -3465,7 +3466,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4313456958422140, guid: 4bbd078c6ddb60541a3067158e56c828, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -40.007004
+      value: -39.973
       objectReference: {fileID: 0}
     - target: {fileID: 4313456958422140, guid: 4bbd078c6ddb60541a3067158e56c828, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3473,7 +3474,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4313456958422140, guid: 4bbd078c6ddb60541a3067158e56c828, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -27.631805
+      value: -27.607
       objectReference: {fileID: 0}
     - target: {fileID: 4313456958422140, guid: 4bbd078c6ddb60541a3067158e56c828, type: 3}
       propertyPath: m_LocalRotation.x
@@ -4341,14 +4342,14 @@ Transform:
   - {fileID: 1549711491}
   - {fileID: 2074941819}
   - {fileID: 1107963636}
-  - {fileID: 1799292782}
-  - {fileID: 688510285}
-  - {fileID: 533205374}
-  - {fileID: 811522693}
-  - {fileID: 832231663}
-  - {fileID: 624647564}
-  - {fileID: 497104344}
   - {fileID: 1294570588}
+  - {fileID: 832231663}
+  - {fileID: 688510285}
+  - {fileID: 624647564}
+  - {fileID: 533205374}
+  - {fileID: 497104344}
+  - {fileID: 1799292782}
+  - {fileID: 811522693}
   - {fileID: 303584030}
   - {fileID: 678901378}
   - {fileID: 804184471}
@@ -4669,6 +4670,38 @@ MonoBehaviour:
   fireBall: {fileID: 1155049261}
   muroEtereo: {fileID: 1311623264}
   muroEtereoInstantiationTransform: {fileID: 1175018379}
+--- !u!1 &1223129020 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1034782792238062, guid: b15a1aac1b43c6d43a7c4f54d2a37c27,
+    type: 3}
+  m_PrefabInstance: {fileID: 2050707279}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1223129021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1223129020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 695aaf2d02e0be1488f9dc5bb3dbdeda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teleportPoint: {fileID: 0}
+--- !u!65 &1223129022
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1223129020}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.3991525, y: 3.5167592, z: 2.3615582}
+  m_Center: {x: -0.017024992, y: 0.119144686, z: 0.0010529471}
 --- !u!1 &1237837424
 GameObject:
   m_ObjectHideFlags: 0

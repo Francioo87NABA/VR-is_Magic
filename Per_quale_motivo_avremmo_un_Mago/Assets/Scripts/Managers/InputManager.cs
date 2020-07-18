@@ -16,6 +16,7 @@ public class InputManager : MonoBehaviour
     public UnityEvent pullEvent;
     public UnityEvent spellEvent;
 
+
     [Header("SpellCaster")]
     public Transform rightHandTransform;
     public Transform leftHandTransform;
@@ -29,6 +30,9 @@ public class InputManager : MonoBehaviour
     public bool wandInLeftHand;
     public int oneTime;
 
+    public Transform teletrasportatiQui;
+    public Player player;
+
     public bool gameOver;
 
     [Header("SteamVR References")]
@@ -40,6 +44,7 @@ public class InputManager : MonoBehaviour
     public SteamVR_Action_Boolean grabAction = SteamVR_Input.GetAction<SteamVR_Action_Boolean>("GrabGrip");
     public SteamVR_Action_Boolean pullAction = SteamVR_Input.GetAction<SteamVR_Action_Boolean>("GrabPinch");
     public SteamVR_Action_Boolean spellAction = SteamVR_Input.GetAction<SteamVR_Action_Boolean>("RightClick");
+    public SteamVR_Action_Boolean teleportAction = SteamVR_Input.GetAction<SteamVR_Action_Boolean>("Teletrasporto");
 
     private void OnEnable()
     {
@@ -151,6 +156,12 @@ public class InputManager : MonoBehaviour
                     oneTime = 1;
                 }
             }
+        }
+
+        if (teleportAction.GetStateDown(leftHand.handType) || teleportAction.GetStateDown(rightHand.handType) && teletrasportatiQui != null)
+        {
+            player.transform.position = teletrasportatiQui.position;
+            //player.transform.rotation = teletrasportatiQui.rotation;
         }
 
         if (gameOver == true)

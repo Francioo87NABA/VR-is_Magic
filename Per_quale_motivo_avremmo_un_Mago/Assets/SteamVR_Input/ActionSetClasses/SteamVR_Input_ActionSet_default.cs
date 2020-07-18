@@ -113,6 +113,14 @@ namespace Valve.VR
             }
         }
         
+        public virtual SteamVR_Action_Boolean Teletrasporto
+        {
+            get
+            {
+                return SteamVR_Actions.default_Teletrasporto;
+            }
+        }
+        
         public virtual SteamVR_Action_Vibration Haptic
         {
             get
