@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyContainer : MonoBehaviour
 {
-
-    public Transform DestinazioneAI;
+    public GameObject portoneDaSfondare;
+    public Transform destinazioneAI;
+    //public Transform deviAspettareProprioQui;
 }

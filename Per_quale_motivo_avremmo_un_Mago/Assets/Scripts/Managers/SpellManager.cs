@@ -15,6 +15,7 @@ public class SpellManager : MonoBehaviour
     [Header("Maggie")]
     public bool celestialIsCasted;
     public GameObject fireBall;
+    public GameObject gigaFireBall;
     public GameObject muroEtereo;
     public Transform muroEtereoInstantiationTransform;
 
@@ -41,6 +42,11 @@ public class SpellManager : MonoBehaviour
             {
                 Instantiate(fireBall, spellToCast.transform.position, spellToCast.transform.rotation);
             }     
+        }
+
+        if (spellToCast.spellName == "GigaFireBall")
+        {
+            Instantiate(gigaFireBall, spellToCast.transform.position, spellToCast.transform.rotation);
         }
 
         if (spellToCast.spellName == "MuroEtereo")

@@ -27,14 +27,27 @@ public class Goblinino : MonoBehaviour
 
     void Start()
     {
+        AiTarget = gameObject.GetComponentInParent<EnemyContainer>().destinazioneAI;
+        portone = gameObject.GetComponentInParent<EnemyContainer>().portoneDaSfondare;
+        //deviAspettareQui = gameObject.GetComponentInParent<EnemyContainer>().deviAspettareProprioQui;
         myAgent = GetComponent<NavMeshAgent>();
-        AiTarget = gameObject.GetComponentInParent<EnemyContainer>().DestinazioneAI;
         myAgent.SetDestination(AiTarget.position);
     }
 
 
     private void Update()
     {
+        //if (ControlloDellaMente)
+        //{
+        //    myAgent.SetDestination(portone.transform.position);
+
+        //    myAnimator.SetBool("Attack", true);
+
+        //    int RandomAttack = Random.Range(0, attackTriggers.Length);
+        //    string attackTrigger = attackTriggers[RandomAttack];
+        //    myAnimator.SetTrigger(attackTrigger);
+        //}
+
         if (portone == null)
         {
             myAnimator.SetBool("Attack", false);

@@ -75,7 +75,7 @@ public class SpellCaster : MonoBehaviour
 
     IEnumerator Autodistruzione()
     {
-        yield return new WaitForSecondsRealtime(4f);
+        yield return new WaitForSecondsRealtime(2.5f);
         InputManager.Singleton.oneTime = 0;
         Destroy(gameObject);
     }

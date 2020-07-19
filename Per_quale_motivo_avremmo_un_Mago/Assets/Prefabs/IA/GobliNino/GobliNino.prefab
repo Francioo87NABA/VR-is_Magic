@@ -96,6 +96,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AiTarget: {fileID: 0}
+  deviAspettareQui: {fileID: 0}
+  portone: {fileID: 0}
   myAnimator: {fileID: 6836166266116851696}
 --- !u!54 &8443765450401587228
 Rigidbody:
@@ -123,10 +125,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.25232917
-  m_Height: 1.2409561
+  m_Radius: 0.46262097
+  m_Height: 1.3179474
   m_Direction: 1
-  m_Center: {x: 0.007151127, y: 0.6871315, z: 0.000000029928795}
+  m_Center: {x: -0.0068392158, y: 0.64863586, z: 0.020112932}
 --- !u!1001 &546045237905719049
 PrefabInstance:
   m_ObjectHideFlags: 0

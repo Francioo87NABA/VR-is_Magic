@@ -5,6 +5,7 @@ Shader "HandSpellCaster"
 	Properties
 	{
 		_TextureSample0("Texture Sample 0", 2D) = "white" {}
+		_Color0("Color 0", Color) = (1,0,0,0.9137255)
 		[HideInInspector] _texcoord( "", 2D ) = "white" {}
 		[HideInInspector] __dirty( "", Int ) = 1
 	}
@@ -22,6 +23,7 @@ Shader "HandSpellCaster"
 			float2 uv_texcoord;
 		};
 
+		uniform float4 _Color0;
 		uniform sampler2D _TextureSample0;
 		uniform float4 _TextureSample0_ST;
 
@@ -29,7 +31,7 @@ Shader "HandSpellCaster"
 		{
 			float2 uv_TextureSample0 = i.uv_texcoord * _TextureSample0_ST.xy + _TextureSample0_ST.zw;
 			float4 tex2DNode2 = tex2D( _TextureSample0, uv_TextureSample0 );
-			o.Albedo = tex2DNode2.rgb;
+			o.Albedo = ( _Color0 * tex2DNode2 ).rgb;
 			o.Alpha = tex2DNode2.a;
 		}
 
@@ -112,10 +114,14 @@ Shader "HandSpellCaster"
 }
 /*ASEBEGIN
 Version=18000
-1;1049;1170;276;1456.884;352.6348;1;True;False
-Node;AmplifyShaderEditor.SamplerNode;2;-996.884,-19.63483;Inherit;True;Property;_TextureSample0;Texture Sample 0;0;0;Create;True;0;0;False;0;-1;860f11165dbbc8f45972a5d745262e19;None;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;6;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
+0;0;1920;1059;1658.693;564.3244;1.3;True;False
+Node;AmplifyShaderEditor.SamplerNode;2;-1173.684,19.36517;Inherit;True;Property;_TextureSample0;Texture Sample 0;0;0;Create;True;0;0;False;0;-1;860f11165dbbc8f45972a5d745262e19;860f11165dbbc8f45972a5d745262e19;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;6;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
+Node;AmplifyShaderEditor.ColorNode;3;-690.1929,-308.2243;Inherit;False;Property;_Color0;Color 0;1;0;Create;True;0;0;False;0;1,0,0,0.9137255;1,0,0,0.9137255;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
+Node;AmplifyShaderEditor.SimpleMultiplyOpNode;4;-319.693,-1.424418;Inherit;False;2;2;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;1;COLOR;0
 Node;AmplifyShaderEditor.StandardSurfaceOutputNode;0;0,0;Float;False;True;-1;2;ASEMaterialInspector;0;0;Standard;HandSpellCaster;False;False;False;False;False;False;False;False;False;False;False;False;False;False;True;False;False;False;False;False;False;Back;0;False;-1;0;False;-1;False;0;False;-1;0;False;-1;False;0;Transparent;0.5;True;True;0;False;Transparent;;Transparent;ForwardOnly;14;all;True;True;True;True;0;False;-1;False;0;False;-1;255;False;-1;255;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;False;2;15;10;25;False;0.5;True;2;5;False;-1;10;False;-1;0;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;0;0,0,0,0;VertexOffset;True;False;Cylindrical;False;Relative;0;;-1;-1;-1;-1;0;False;0;0;False;-1;-1;0;False;-1;0;0;0;False;0.1;False;-1;0;False;-1;16;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT3;0,0,0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT3;0,0,0;False;7;FLOAT3;0,0,0;False;8;FLOAT;0;False;9;FLOAT;0;False;10;FLOAT;0;False;13;FLOAT3;0,0,0;False;11;FLOAT3;0,0,0;False;12;FLOAT3;0,0,0;False;14;FLOAT4;0,0,0,0;False;15;FLOAT3;0,0,0;False;0
-WireConnection;0;0;2;0
+WireConnection;4;0;3;0
+WireConnection;4;1;2;0
+WireConnection;0;0;4;0
 WireConnection;0;9;2;4
 ASEEND*/
-//CHKSM=8ACB527A484004FD108206BC3CE5C46DE2907F53
+//CHKSM=55EFCF878C361F12E4186C00FEA7A0AECFD18145

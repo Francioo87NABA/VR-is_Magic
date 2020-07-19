@@ -51,7 +51,7 @@ public class SpawnManager : MonoBehaviour
 
                 newEnemy.transform.parent = enemyContainerTorre1.transform;
 
-                yield return new WaitForSecondsRealtime(4f);
+                yield return new WaitForSecondsRealtime(10f);
             }
 
             //2* ondata torre2
@@ -63,7 +63,7 @@ public class SpawnManager : MonoBehaviour
 
                 newEnemy.transform.parent = enemyContainerTorre2.transform;
 
-                yield return new WaitForSecondsRealtime(2f);
+                yield return new WaitForSecondsRealtime(8f);
             }
 
             //3* ondata torre3
@@ -75,7 +75,7 @@ public class SpawnManager : MonoBehaviour
 
                 newEnemy.transform.parent = enemyContainerTorre3.transform;
 
-                yield return new WaitForSecondsRealtime(0.5f);
+                yield return new WaitForSecondsRealtime(6f);
             }
 
             Debug.Log("haivinto");
