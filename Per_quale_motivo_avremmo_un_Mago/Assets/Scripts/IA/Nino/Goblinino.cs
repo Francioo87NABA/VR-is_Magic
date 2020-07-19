@@ -28,6 +28,7 @@ public class Goblinino : MonoBehaviour
     void Start()
     {
         myAgent = GetComponent<NavMeshAgent>();
+        AiTarget = gameObject.GetComponentInParent<EnemyContainer>().DestinazioneAI;
         myAgent.SetDestination(AiTarget.position);
     }
 

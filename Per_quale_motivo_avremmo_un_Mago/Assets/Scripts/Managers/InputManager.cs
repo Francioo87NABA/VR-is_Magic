@@ -32,6 +32,8 @@ public class InputManager : MonoBehaviour
 
     public Transform teletrasportatiQui;
     public Player player;
+    public GameObject PS_teletrasporto;
+    public GameObject CashedPS_teletrasporto;
 
     public bool gameOver;
 
@@ -161,7 +163,8 @@ public class InputManager : MonoBehaviour
         if (teleportAction.GetStateDown(leftHand.handType) || teleportAction.GetStateDown(rightHand.handType) && teletrasportatiQui != null)
         {
             player.transform.position = teletrasportatiQui.position;
-            //player.transform.rotation = teletrasportatiQui.rotation;
+            CashedPS_teletrasporto = Instantiate(PS_teletrasporto, teletrasportatiQui.position, teletrasportatiQui.rotation);
+            Destroy(CashedPS_teletrasporto, 6.3f);
         }
 
         if (gameOver == true)

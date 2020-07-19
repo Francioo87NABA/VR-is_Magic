@@ -6,10 +6,14 @@ public class SpawnManager : MonoBehaviour
 {
     public static SpawnManager Singleton;
 
-    public Transform[] spawnPoints;
+    public Transform[] spawnPointsTorre1;
+    public Transform[] spawnPointsTorre2;
+    public Transform[] spawnPointsTorre3;
 
     [Header("Enemy")]
-    public GameObject enemyContainer;
+    public GameObject enemyContainerTorre1;
+    public GameObject enemyContainerTorre2;
+    public GameObject enemyContainerTorre3;
     public GameObject nino;
     public bool aspetta;
 
@@ -38,38 +42,38 @@ public class SpawnManager : MonoBehaviour
 
         while (stopSpawning == false)
         {
-            //1* ondata
+            //1* ondata torre1
             for (int i = 0; i < 10; i++)
             {
-                int where = Random.Range(0, spawnPoints.Length);
+                int where = Random.Range(0, spawnPointsTorre1.Length);
 
-                GameObject newEnemy = Instantiate(nino, spawnPoints[where].position, Quaternion.identity);
+                GameObject newEnemy = Instantiate(nino, spawnPointsTorre1[where].position, Quaternion.identity);
 
-                newEnemy.transform.parent = enemyContainer.transform;
+                newEnemy.transform.parent = enemyContainerTorre1.transform;
 
                 yield return new WaitForSecondsRealtime(4f);
             }
 
-            //2* ondata
+            //2* ondata torre2
             for (int i = 0; i < 10; i++)
             {
-                int where = Random.Range(0, spawnPoints.Length);
+                int where = Random.Range(0, spawnPointsTorre2.Length);
 
-                GameObject newEnemy = Instantiate(nino, spawnPoints[where].position, Quaternion.identity);
+                GameObject newEnemy = Instantiate(nino, spawnPointsTorre2[where].position, Quaternion.identity);
 
-                newEnemy.transform.parent = enemyContainer.transform;
+                newEnemy.transform.parent = enemyContainerTorre2.transform;
 
                 yield return new WaitForSecondsRealtime(2f);
             }
 
-            //3* ondata
+            //3* ondata torre3
             for (int i = 0; i < 10; i++)
             {
-                int where = Random.Range(0, spawnPoints.Length);
+                int where = Random.Range(0, spawnPointsTorre3.Length);
 
-                GameObject newEnemy = Instantiate(nino, spawnPoints[where].position, Quaternion.identity);
+                GameObject newEnemy = Instantiate(nino, spawnPointsTorre3[where].position, Quaternion.identity);
 
-                newEnemy.transform.parent = enemyContainer.transform;
+                newEnemy.transform.parent = enemyContainerTorre3.transform;
 
                 yield return new WaitForSecondsRealtime(0.5f);
             }

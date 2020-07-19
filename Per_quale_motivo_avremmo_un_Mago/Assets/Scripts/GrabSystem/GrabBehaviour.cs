@@ -204,8 +204,13 @@ public class GrabBehaviour : MonoBehaviour
 
         if (Physics.Raycast(wandRayTransform.position, wandRayTransform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity))
         {
-            Transform tempTeletrasporto = hit.collider.gameObject.GetComponent<Teletrasporto>().teleportPoint;
-            InputManager.Singleton.teletrasportatiQui = tempTeletrasporto;
+            Teletrasporto tempTeletrasporto = hit.collider.gameObject.GetComponent<Teletrasporto>();
+            if (tempTeletrasporto != null)
+            {
+                Transform teletrasportamento = tempTeletrasporto.teleportPoint;
+                InputManager.Singleton.teletrasportatiQui = teletrasportamento;
+            }
+            
 
             Grabbable tempGrabbable = hit.collider.gameObject.GetComponent<Grabbable>();
             if (tempGrabbable != null)
