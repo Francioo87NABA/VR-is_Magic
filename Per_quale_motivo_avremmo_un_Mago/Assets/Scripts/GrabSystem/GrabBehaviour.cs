@@ -213,6 +213,12 @@ public class GrabBehaviour : MonoBehaviour
 
         if (Physics.Raycast(wandRayTransform.position, wandRayTransform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity))
         {
+            Goblinino tempGoblinino = hit.collider.gameObject.GetComponent<Goblinino>();
+            if (SpellManager.Singleton.metamorfosi && tempGoblinino != null)
+            {
+                tempGoblinino.metamorfosi = true;
+            }
+
             Teletrasporto tempTeletrasporto = hit.collider.gameObject.GetComponent<Teletrasporto>();
             if (tempTeletrasporto != null && tempTeletrasporto.segnaletica == false)
             {

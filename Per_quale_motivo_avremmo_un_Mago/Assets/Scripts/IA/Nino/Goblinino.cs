@@ -24,6 +24,9 @@ public class Goblinino : MonoBehaviour
     public Animator myAnimator;
     NavMeshAgent myAgent;
 
+    public GameObject animale;
+    public bool metamorfosi;
+
 
     void Start()
     {
@@ -65,6 +68,14 @@ public class Goblinino : MonoBehaviour
         else if (actualTimer > 0 && seiInIdle)
         {
             actualTimer -= Time.deltaTime;
+        }
+
+        if (metamorfosi)
+        {
+            GameObject newAnimal = Instantiate(animale, transform.position, transform.rotation);
+            newAnimal.transform.parent = gameObject.GetComponentInParent<EnemyContainer>().transform;
+            //Destroy(gameObject);
+
         }
     }
 

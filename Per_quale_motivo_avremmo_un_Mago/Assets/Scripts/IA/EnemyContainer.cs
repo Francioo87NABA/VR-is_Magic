@@ -6,5 +6,6 @@ public class EnemyContainer : MonoBehaviour
 {
     public GameObject portoneDaSfondare;
     public Transform destinazioneAI;
+    public Transform destinazioneAIAnimali;
     //public Transform deviAspettareProprioQui;
 }

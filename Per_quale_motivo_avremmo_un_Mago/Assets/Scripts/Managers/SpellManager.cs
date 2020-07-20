@@ -21,6 +21,9 @@ public class SpellManager : MonoBehaviour
     public Transform fulmineInstantiation;
     public GameObject muroEtereo;
     public Transform muroEtereoInstantiationTransform;
+    public bool metamorfosi;
+    public GameObject proiettile;
+    public Transform wandRay;
 
     //public Transform spellManager;
 
@@ -58,6 +61,32 @@ public class SpellManager : MonoBehaviour
         if (spellToCast.spellName == "Fulmine")
         {
             Instantiate(fulmine, fulmineInstantiation.position, fulmineInstantiation.rotation);
+        }
+
+        if (spellToCast.spellName == "Metamorfosi")
+        {
+            StartCoroutine(Metamorfosi());
+        }
+
+        if (spellToCast.spellName == "Proiettili")
+        {
+            StartCoroutine(Proiettili());
+        }
+    }
+
+    IEnumerator Metamorfosi()
+    {
+        metamorfosi = true;
+        yield return new WaitForSecondsRealtime(3f);
+        metamorfosi = false;
+    }
+
+    IEnumerator Proiettili()
+    {
+        for (int i = 0; i < 20; i++)
+        {
+            Instantiate(proiettile, wandRay.position, wandRay.rotation);
+            yield return new WaitForSecondsRealtime(0.5f);
         }
     }
 }

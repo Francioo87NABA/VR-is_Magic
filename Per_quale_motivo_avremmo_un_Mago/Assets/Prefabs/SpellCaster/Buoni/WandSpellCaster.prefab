@@ -196,9 +196,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3624779990442998637}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.877, y: -14.391, z: 0}
-  m_LocalScale: {x: 0.8102117, y: 0.8102117, z: 0.8102117}
+  m_LocalScale: {x: 0.5420721, y: 0.5420721, z: 0.5420721}
   m_Children:
   - {fileID: 2953924017171361730}
   - {fileID: 3994825020494442894}
@@ -234,11 +234,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d53570c963d7a140a42268464847608, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spellName: FireBall
+  spellName: Metamorfosi
   spellPointsSequence:
   - {fileID: 2678764055067666379}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 4225198583817910663}
+  - {fileID: 3494268878934538609}
   SpellCasted: 0
 --- !u!1001 &7175096441342210896
 PrefabInstance:
@@ -336,6 +336,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7175096441342210896}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3494268878934538609 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6047546201409538593, guid: f94898ec5af61a54c8956bd264a3bb73,
+    type: 3}
+  m_PrefabInstance: {fileID: 7175096441342210896}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6fe7bca1e70a374ba981d3c88fc208a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7588521955573396390
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -357,8 +369,7 @@ PrefabInstance:
         type: 3}
       propertyPath: connectionToSpellCaster
       value: 
-      objectReference: {fileID: 5242750386287617188, guid: 004d9ded333537341852b0b2ee1edc19,
-        type: 3}
+      objectReference: {fileID: 7819039658536043327}
     - target: {fileID: 6791323455944753704, guid: f94898ec5af61a54c8956bd264a3bb73,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -433,6 +444,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7588521955573396390}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4225198583817910663 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6047546201409538593, guid: f94898ec5af61a54c8956bd264a3bb73,
+    type: 3}
+  m_PrefabInstance: {fileID: 7588521955573396390}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6fe7bca1e70a374ba981d3c88fc208a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8557352273144180202
 PrefabInstance:
   m_ObjectHideFlags: 0

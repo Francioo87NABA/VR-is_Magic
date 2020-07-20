@@ -26,6 +26,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dannoArma: 10
+  controllaMente: 0
 --- !u!1 &8443765450401587224
 GameObject:
   m_ObjectHideFlags: 0
@@ -55,7 +56,7 @@ Transform:
   m_GameObject: {fileID: 8443765450401587224}
   m_LocalRotation: {x: -0, y: -0.9832677, z: 0, w: -0.18216667}
   m_LocalPosition: {x: -0.546, y: -2.744, z: 36.676}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.289609, y: 1.289609, z: 1.289609}
   m_Children:
   - {fileID: 3482675861414734474}
   m_Father: {fileID: 0}
@@ -99,6 +100,8 @@ MonoBehaviour:
   deviAspettareQui: {fileID: 0}
   portone: {fileID: 0}
   myAnimator: {fileID: 6836166266116851696}
+  animale: {fileID: 0}
+  metamorfosi: 0
 --- !u!54 &8443765450401587228
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -125,10 +128,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.46262097
-  m_Height: 1.3179474
+  m_Radius: 0.54371184
+  m_Height: 1.3368999
   m_Direction: 1
-  m_Center: {x: -0.0068392158, y: 0.64863586, z: 0.020112932}
+  m_Center: {x: -0.0005345704, y: 0.63915956, z: 0.020112915}
 --- !u!1001 &546045237905719049
 PrefabInstance:
   m_ObjectHideFlags: 0
