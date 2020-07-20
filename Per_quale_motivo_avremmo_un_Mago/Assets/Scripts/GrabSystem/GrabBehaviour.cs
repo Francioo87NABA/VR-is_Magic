@@ -110,13 +110,15 @@ public class GrabBehaviour : MonoBehaviour
 
         for (int i = 0; i < grabbableInHand.Count; i++)
         {
-        
-            grabbableInHand[i].transform.parent = null;
-            grabbableInHand[i].myRigidbody.isKinematic = false;
-            grabbableInHand[i].myRigidbody.velocity = currentHand3dSpeed;
-            grabbableInHand[i].myRigidbody.AddTorque(currentHandRotation);
-
-            if (grabbableInHand[i].IsThisAWand)
+            
+            
+            if (grabbableInHand[i].IsThisAFulmine)
+            {
+                grabbableInHand[i].transform.parent = null;
+                grabbableInHand[i].myRigidbody.isKinematic = false;
+                grabbableInHand[i].myRigidbody.velocity = currentHand3dSpeed * 2;
+            }
+            else if (grabbableInHand[i].IsThisAWand)
             {
                 InputManager.Singleton.wandInHands = false;
                 InputManager.Singleton.wandInRightHand = false;
@@ -124,6 +126,13 @@ public class GrabBehaviour : MonoBehaviour
                 grabbableInHand[i].transform.parent = null;
                 grabbableInHand[i].myRigidbody.isKinematic = false;
                 StartCoroutine(WandReturn());
+            }
+            else
+            {
+                grabbableInHand[i].transform.parent = null;
+                grabbableInHand[i].myRigidbody.isKinematic = false;
+                grabbableInHand[i].myRigidbody.velocity = currentHand3dSpeed;
+                grabbableInHand[i].myRigidbody.AddTorque(currentHandRotation);
             }
 
             if (isRightHand)
@@ -205,11 +214,13 @@ public class GrabBehaviour : MonoBehaviour
         if (Physics.Raycast(wandRayTransform.position, wandRayTransform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity))
         {
             Teletrasporto tempTeletrasporto = hit.collider.gameObject.GetComponent<Teletrasporto>();
-            if (tempTeletrasporto != null)
+            if (tempTeletrasporto != null && tempTeletrasporto.segnaletica == false)
             {
                 Transform teletrasportamento = tempTeletrasporto.teleportPoint;
                 InputManager.Singleton.teletrasportatiQui = teletrasportamento;
+                tempTeletrasporto.segnaletica = true;
             }
+
             
 
             Grabbable tempGrabbable = hit.collider.gameObject.GetComponent<Grabbable>();

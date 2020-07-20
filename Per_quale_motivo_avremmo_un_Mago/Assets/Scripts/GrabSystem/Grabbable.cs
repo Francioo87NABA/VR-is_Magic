@@ -7,6 +7,7 @@ public class Grabbable : MonoBehaviour
     public Rigidbody myRigidbody;
     public bool rotateToOriginWhenGrabbed;
     public bool IsThisAWand;
+    public bool IsThisAFulmine;
 
     [HideInInspector]
     public GrabBehaviour connectedGrabBehaviour;

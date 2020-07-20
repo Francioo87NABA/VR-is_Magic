@@ -184,6 +184,7 @@ GameObject:
   - component: {fileID: 6285652103091102795}
   - component: {fileID: 5890111515976552294}
   - component: {fileID: 3672155523268796452}
+  - component: {fileID: 8206662284200996798}
   m_Layer: 0
   m_Name: HandSpellCaster
   m_TagString: Untagged
@@ -283,6 +284,23 @@ MonoBehaviour:
   - {fileID: 2723022279237969613}
   - {fileID: 8707921561462353984}
   - {fileID: 6539344992180980775}
+  SpellCasted: 0
+--- !u!114 &8206662284200996798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8857223379296039516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d53570c963d7a140a42268464847608, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spellName: Fulmine
+  spellPointsSequence:
+  - {fileID: 4532158636100335605}
+  - {fileID: 8707921561462353984}
   SpellCasted: 0
 --- !u!1001 &661282186043459078
 PrefabInstance:
@@ -789,6 +807,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f94898ec5af61a54c8956bd264a3bb73, type: 3}
+--- !u!4 &7092065176148423083 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6791323455944753704, guid: f94898ec5af61a54c8956bd264a3bb73,
+    type: 3}
+  m_PrefabInstance: {fileID: 4347014879239156611}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &8052014173999364514 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6047546201409538593, guid: f94898ec5af61a54c8956bd264a3bb73,
@@ -801,12 +825,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6fe7bca1e70a374ba981d3c88fc208a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &7092065176148423083 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6791323455944753704, guid: f94898ec5af61a54c8956bd264a3bb73,
-    type: 3}
-  m_PrefabInstance: {fileID: 4347014879239156611}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4496616644572226779
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1102,12 +1120,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f94898ec5af61a54c8956bd264a3bb73, type: 3}
---- !u!4 &2889215140999130820 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6791323455944753704, guid: f94898ec5af61a54c8956bd264a3bb73,
-    type: 3}
-  m_PrefabInstance: {fileID: 8513823577155529964}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2723022279237969613 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6047546201409538593, guid: f94898ec5af61a54c8956bd264a3bb73,
@@ -1120,3 +1132,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6fe7bca1e70a374ba981d3c88fc208a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &2889215140999130820 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6791323455944753704, guid: f94898ec5af61a54c8956bd264a3bb73,
+    type: 3}
+  m_PrefabInstance: {fileID: 8513823577155529964}
+  m_PrefabAsset: {fileID: 0}

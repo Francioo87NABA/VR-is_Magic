@@ -16,6 +16,9 @@ public class SpellManager : MonoBehaviour
     public bool celestialIsCasted;
     public GameObject fireBall;
     public GameObject gigaFireBall;
+    public Transform gigaFiraballInstantiation;
+    public GameObject fulmine;
+    public Transform fulmineInstantiation;
     public GameObject muroEtereo;
     public Transform muroEtereoInstantiationTransform;
 
@@ -37,11 +40,8 @@ public class SpellManager : MonoBehaviour
         }
 
         if (spellToCast.spellName == "FireBall")
-        {
-            for (int i = 0; i < 1; i++)
-            {
-                Instantiate(fireBall, spellToCast.transform.position, spellToCast.transform.rotation);
-            }     
+        {        
+            Instantiate(fireBall, spellToCast.transform.position, spellToCast.transform.rotation);             
         }
 
         if (spellToCast.spellName == "GigaFireBall")
@@ -53,6 +53,11 @@ public class SpellManager : MonoBehaviour
         {
             Instantiate(muroEtereo, muroEtereoInstantiationTransform.position, muroEtereoInstantiationTransform.rotation);
             Debug.Log("unavolta");  
+        }
+
+        if (spellToCast.spellName == "Fulmine")
+        {
+            Instantiate(fulmine, fulmineInstantiation.position, fulmineInstantiation.rotation);
         }
     }
 }
