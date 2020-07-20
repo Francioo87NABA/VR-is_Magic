@@ -182,6 +182,8 @@ GameObject:
   - component: {fileID: 7208979065417638275}
   - component: {fileID: 7819039658536043327}
   - component: {fileID: 2278254917445184890}
+  - component: {fileID: 1070906398}
+  - component: {fileID: 8863897051926726088}
   m_Layer: 0
   m_Name: WandSpellCaster
   m_TagString: Untagged
@@ -239,6 +241,41 @@ MonoBehaviour:
   - {fileID: 2678764055067666379}
   - {fileID: 4225198583817910663}
   - {fileID: 3494268878934538609}
+  SpellCasted: 0
+--- !u!114 &1070906398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3624779990442998637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d53570c963d7a140a42268464847608, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spellName: Proiettili
+  spellPointsSequence:
+  - {fileID: 3494268878934538609}
+  - {fileID: 4225198583817910663}
+  SpellCasted: 0
+--- !u!114 &8863897051926726088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3624779990442998637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d53570c963d7a140a42268464847608, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spellName: Tornado
+  spellPointsSequence:
+  - {fileID: 4225198583817910663}
+  - {fileID: 3494268878934538609}
+  - {fileID: 2678764055067666379}
   SpellCasted: 0
 --- !u!1001 &7175096441342210896
 PrefabInstance:
