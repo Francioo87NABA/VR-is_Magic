@@ -185,6 +185,7 @@ GameObject:
   - component: {fileID: 5890111515976552294}
   - component: {fileID: 3672155523268796452}
   - component: {fileID: 8206662284200996798}
+  - component: {fileID: 4091775538051305744}
   m_Layer: 0
   m_Name: HandSpellCaster
   m_TagString: Untagged
@@ -302,6 +303,29 @@ MonoBehaviour:
   - {fileID: 4532158636100335605}
   - {fileID: 8707921561462353984}
   SpellCasted: 0
+--- !u!114 &4091775538051305744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8857223379296039516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Magie/SpellCaster
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 10
 --- !u!1001 &661282186043459078
 PrefabInstance:
   m_ObjectHideFlags: 0

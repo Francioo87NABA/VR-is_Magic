@@ -12,6 +12,9 @@ GameObject:
   - component: {fileID: 474528985437620628}
   - component: {fileID: 5158404501956563499}
   - component: {fileID: 164399758505668594}
+  - component: {fileID: 1607362319701520818}
+  - component: {fileID: 9073564361347065535}
+  - component: {fileID: 1831765258418830322}
   m_Layer: 0
   m_Name: PallaDiFuoco
   m_TagString: Magia
@@ -26,7 +29,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1011092175105608168}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.94, y: -13.043, z: -0.21}
   m_LocalScale: {x: 0.31161997, y: 0.31161997, z: 0.31161997}
   m_Children:
@@ -66,6 +69,7 @@ MonoBehaviour:
   myRigidbody: {fileID: 0}
   rotateToOriginWhenGrabbed: 0
   IsThisAWand: 0
+  IsThisAFulmine: 0
   connectedGrabBehaviour: {fileID: 0}
 --- !u!54 &164399758505668594
 Rigidbody:
@@ -83,6 +87,67 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1607362319701520818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1011092175105608168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Magie/FireBall/Fuoco
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 25
+--- !u!114 &9073564361347065535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1011092175105608168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Magie/FireBall/Esplosione
+  PlayEvent: 2
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 40
+--- !u!114 &1831765258418830322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1011092175105608168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 289cd687370596e4aae1f78e3af47c71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isThisFireBall: 1
+  isThisGigaFireBall: 0
+  isThisFulmine: 0
 --- !u!1 &1333028905148936567
 GameObject:
   m_ObjectHideFlags: 0

@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 8443765450401587229}
   - component: {fileID: 8443765450401587228}
   - component: {fileID: 1445317120}
+  - component: {fileID: 5939364363582884415}
   m_Layer: 0
   m_Name: GobliNino
   m_TagString: Enemy
@@ -132,6 +133,29 @@ CapsuleCollider:
   m_Height: 1.3368999
   m_Direction: 1
   m_Center: {x: -0.0005345704, y: 0.63915956, z: 0.020112915}
+--- !u!114 &5939364363582884415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8443765450401587224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Nino/Morte/Morte
+  PlayEvent: 2
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &546045237905719049
 PrefabInstance:
   m_ObjectHideFlags: 0

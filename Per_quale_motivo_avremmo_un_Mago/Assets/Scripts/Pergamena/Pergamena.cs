@@ -9,31 +9,30 @@ public class Pergamena : MonoBehaviour
     public bool newGame;
     public bool exit;
 
+
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Hand"))
         {
-            if (play)
+            if (play && MenùManager.Singleton.oneTime)
             {
+                MenùManager.Singleton.oneTime = true;
                 StartCoroutine(Play());
             }
-            else if (newGame)
+            else if (newGame && MenùManager.Singleton.oneTime == false)
             {
-                StartCoroutine(NewGame());
+                MenùManager.Singleton.oneTime = true;
+                MenùManager.Singleton.newGameee = true;
             }
-            else if (exit)
+            else if (exit && MenùManager.Singleton.oneTime == false)
             {
+                MenùManager.Singleton.oneTime = true;
                 StartCoroutine(Quit());
             }      
         }
     }
 
-    IEnumerator NewGame()
-    {
-        //Instanzia l introduzione
-        yield return new WaitForSeconds(5f);
-        SceneManager.LoadScene(1);
-    }
 
     IEnumerator Play()
     {

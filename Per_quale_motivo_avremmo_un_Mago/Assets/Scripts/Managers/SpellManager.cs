@@ -28,6 +28,10 @@ public class SpellManager : MonoBehaviour
     public GameObject tornado;
     public Transform tornadoInstantiation;
 
+    [HideInInspector]
+    public GameObject cashedFireBall;
+    public GameObject cashedGigaFireBall;
+    public GameObject cashedFulmine;
     //public Transform spellManager;
 
     private void OnEnable()

@@ -12,6 +12,9 @@ TagManager:
   - Arma
   - Target
   - PuntoDAttesa
+  - projectile
+  - FxTemporaire
+  - Ground
   layers:
   - Default
   - TransparentFX
