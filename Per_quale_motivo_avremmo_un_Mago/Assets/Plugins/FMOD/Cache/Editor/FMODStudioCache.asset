@@ -1,5 +1,184 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8843147314483478753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Nino/Morte/Morte
+  m_EditorClassIdentifier: 
+  Path: event:/Nino/Morte/Morte
+  guid: 9341fd5600f1b940bf04cc1a1d76613d
+  Banks:
+  - {fileID: 5308919384986625868}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1750
+--- !u!114 &-7998516315737561730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogo/DialogoNewGame
+  m_EditorClassIdentifier: 
+  Path: event:/Dialogo/DialogoNewGame
+  guid: c34d034e216ba84c9aba7f53b6cb42c7
+  Banks:
+  - {fileID: 5308919384986625868}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 45048
+--- !u!114 &-7752409086237052951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Musica/Attacco
+  m_EditorClassIdentifier: 
+  Path: event:/Musica/Attacco
+  guid: 1ddf54e69a76a545b8c1d7223040d4a0
+  Banks:
+  - {fileID: 5308919384986625868}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 165210
+--- !u!114 &-7239632369488881648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Nino/Random/Random
+  m_EditorClassIdentifier: 
+  Path: event:/Nino/Random/Random
+  guid: 291fa33459235645aa98fa84ff02ae8a
+  Banks:
+  - {fileID: 5308919384986625868}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3000
+--- !u!114 &-7199738425288719013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMODE_VR_is_Magic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637309530149539518
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-6457199852768984280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Musica/Menu
+  m_EditorClassIdentifier: 
+  Path: event:/Musica/Menu
+  guid: 01b4fe1f4c84034a9ce4da7d38bef9e6
+  Banks:
+  - {fileID: 5308919384986625868}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 133250
+--- !u!114 &-5037575170755951424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Magie/Tornado/Tornado
+  m_EditorClassIdentifier: 
+  Path: event:/Magie/Tornado/Tornado
+  guid: 242453dbd070e94abb03098d6be8e1ac
+  Banks:
+  - {fileID: 5308919384986625868}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 33000
+--- !u!114 &-4589157508506411236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Magie/Fulmine/Elettricit\xE0"
+  m_EditorClassIdentifier: 
+  Path: "event:/Magie/Fulmine/Elettricit\xE0"
+  guid: aefb87406a3ddf4f861fb88ea72220e0
+  Banks:
+  - {fileID: 5308919384986625868}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 33140
 --- !u!114 &-4328863975749666980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18,6 +197,93 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-4272302341988637273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMODE_VR_is_Magic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637309520393053550
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-4152818427092889055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Magie/Proiettile/Proiettile
+  m_EditorClassIdentifier: 
+  Path: event:/Magie/Proiettile/Proiettile
+  guid: 953fdd64fda0734ea3c397c36ce6faf0
+  Banks:
+  - {fileID: 5308919384986625868}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2700
+--- !u!114 &-3515739720090139787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Magie/Teletrasporto/Teletrasporto
+  m_EditorClassIdentifier: 
+  Path: event:/Magie/Teletrasporto/Teletrasporto
+  guid: 51e99b96d00db942b13a0f558c643dbb
+  Banks:
+  - {fileID: 5308919384986625868}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1700
+--- !u!114 &-1422468585903980198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Nino/Vittoria/Vittoria
+  m_EditorClassIdentifier: 
+  Path: event:/Nino/Vittoria/Vittoria
+  guid: 182255fe45c17246946c61fe923b7a64
+  Banks:
+  - {fileID: 5308919384986625868}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2620
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32,15 +298,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 8767852797580668669}
-  - {fileID: 2424613004001083264}
+  - {fileID: 5308919384986625868}
   EditorEvents:
-  - {fileID: 1935012321933333123}
+  - {fileID: 7364476260874833134}
+  - {fileID: -5037575170755951424}
+  - {fileID: -3515739720090139787}
+  - {fileID: 6246550747161273690}
+  - {fileID: -4152818427092889055}
+  - {fileID: -4589157508506411236}
+  - {fileID: 4504373884596430671}
+  - {fileID: 9136671609368433722}
+  - {fileID: -6457199852768984280}
+  - {fileID: -1422468585903980198}
+  - {fileID: -7752409086237052951}
+  - {fileID: -7239632369488881648}
+  - {fileID: -8843147314483478753}
+  - {fileID: -7998516315737561730}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 2424613004001083264}
+  - {fileID: 5308919384986625868}
   StringsBanks:
   - {fileID: 8767852797580668669}
-  stringsBankWriteTime: 637309513989236284
+  stringsBankWriteTime: 637309532036629998
   cacheVersion: 3
 --- !u!114 &1935012321933333123
 MonoBehaviour:
@@ -56,8 +335,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: "event:/Elettricit\xE0"
   guid: aefb87406a3ddf4f861fb88ea72220e0
-  Banks:
-  - {fileID: 2424613004001083264}
+  Banks: []
   IsStream: 1
   Is3D: 1
   IsOneShot: 1
@@ -82,7 +360,71 @@ MonoBehaviour:
   lastModified: 637309513989191453
   LoadResult: 0
   FileSizes: []
+  Exists: 0
+--- !u!114 &4504373884596430671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Magie/FireBall/Esplosione
+  m_EditorClassIdentifier: 
+  Path: event:/Magie/FireBall/Esplosione
+  guid: ec1aa706e880f6439e889adedf82c085
+  Banks:
+  - {fileID: 5308919384986625868}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4500
+--- !u!114 &5308919384986625868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMODE_VR_is_Magic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637309532036574403
+  LoadResult: 0
+  FileSizes: []
   Exists: 1
+--- !u!114 &6246550747161273690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Magie/Fulmine/Strike
+  m_EditorClassIdentifier: 
+  Path: event:/Magie/Fulmine/Strike
+  guid: 77822c9658a5304d88186c85e8dc859e
+  Banks:
+  - {fileID: 5308919384986625868}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 6700
 --- !u!114 &6271908134236772632
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -101,6 +443,29 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &7364476260874833134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Magie/FireBall/Fuoco
+  m_EditorClassIdentifier: 
+  Path: event:/Magie/FireBall/Fuoco
+  guid: 1da3cd7925218f42985ff10c2d03bb0a
+  Banks:
+  - {fileID: 5308919384986625868}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 10000
 --- !u!114 &8767852797580668669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115,9 +480,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: FMODE_VR_is_Magic/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637309513989236284
+  lastModified: 637309532036629998
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 738
+    Value: 1454
   Exists: 1
+--- !u!114 &9136671609368433722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Nino/Attacco/Attacco
+  m_EditorClassIdentifier: 
+  Path: event:/Nino/Attacco/Attacco
+  guid: 01aa9302654f404cb686f36732157b92
+  Banks:
+  - {fileID: 5308919384986625868}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2500

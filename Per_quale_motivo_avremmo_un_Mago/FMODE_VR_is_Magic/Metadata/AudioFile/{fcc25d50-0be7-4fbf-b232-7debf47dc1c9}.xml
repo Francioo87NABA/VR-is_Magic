@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{fcc25d50-0be7-4fbf-b232-7debf47dc1c9}">
+		<property name="assetPath">
+			<value>DialogoNewGame.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>45.048000000000002</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{adf104f9-034f-4405-a503-d88c10e91f8a}</destination>
+		</relationship>
+	</object>
+</objects>

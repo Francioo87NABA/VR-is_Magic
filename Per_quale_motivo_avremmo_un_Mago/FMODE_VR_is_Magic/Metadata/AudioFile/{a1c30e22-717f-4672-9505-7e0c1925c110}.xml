@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{a1c30e22-717f-4672-9505-7e0c1925c110}">
+		<property name="assetPath">
+			<value>Magie/Fuoco.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>13</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{adf104f9-034f-4405-a503-d88c10e91f8a}</destination>
+		</relationship>
+	</object>
+</objects>

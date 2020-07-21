@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="EncodableAsset" id="{3efcbb50-8c0f-4bd5-8c82-bc47b6a53653}">
+		<property name="assetPath">
+			<value>Nino/Attacco/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{adf104f9-034f-4405-a503-d88c10e91f8a}</destination>
+		</relationship>
+	</object>
+</objects>
