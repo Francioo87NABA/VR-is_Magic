@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SpawnManager : MonoBehaviour
 {
@@ -33,7 +34,10 @@ public class SpawnManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (stopSpawning)
+        {
+            StartCoroutine(HaiVinto());
+        }
     }
 
     IEnumerator EnemySpawningPeriod()
@@ -84,5 +88,12 @@ public class SpawnManager : MonoBehaviour
 
             yield return new WaitForSecondsRealtime(1f);
         }
+    }
+
+    IEnumerator HaiVinto()
+    {
+        //Fai qualcosa che simboleggia la vittoria
+        yield return new WaitForSecondsRealtime(5f);
+        SceneManager.LoadScene(0);
     }
 }

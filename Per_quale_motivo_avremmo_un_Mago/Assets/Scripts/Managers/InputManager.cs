@@ -169,7 +169,14 @@ public class InputManager : MonoBehaviour
 
         if (gameOver == true)
         {
-            SceneManager.LoadScene(0);
+            StartCoroutine(HaiPerso());
         }
+    }
+
+    IEnumerator HaiPerso()
+    {
+        //Aggiungi qualcosa che faccia capire di aver perso
+        yield return new WaitForSecondsRealtime(5f);
+        SceneManager.LoadScene(0);
     }
 }

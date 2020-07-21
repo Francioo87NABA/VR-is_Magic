@@ -22,7 +22,7 @@ public class Portone : MonoBehaviour
         if (vita <= 0)
         {
             SpawnManager.Singleton.stopSpawning = true;
-            //InputManager.Singleton.gameOver = true;
+            InputManager.Singleton.gameOver = true;
             Destroy(padre);
             Destroy(gameObject);
         }
