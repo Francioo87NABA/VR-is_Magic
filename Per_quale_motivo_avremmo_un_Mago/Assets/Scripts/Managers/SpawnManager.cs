@@ -20,6 +20,8 @@ public class SpawnManager : MonoBehaviour
 
     public bool stopSpawning;
 
+    public GameObject player;
+
     private void OnEnable()
     {
         Singleton = this;
@@ -94,6 +96,7 @@ public class SpawnManager : MonoBehaviour
     {
         //Fai qualcosa che simboleggia la vittoria
         yield return new WaitForSecondsRealtime(5f);
+        Destroy(player);
         SceneManager.LoadScene(0);
     }
 }

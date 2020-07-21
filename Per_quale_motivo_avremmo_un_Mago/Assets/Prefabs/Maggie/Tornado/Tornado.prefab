@@ -189,7 +189,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2822519703779705330
 Transform:
   m_ObjectHideFlags: 0
@@ -258,8 +258,8 @@ MonoBehaviour:
   Preload: 0
   Params: []
   OverrideAttenuation: 1
-  OverrideMinDistance: 0.9
-  OverrideMaxDistance: 48.4
+  OverrideMinDistance: 5
+  OverrideMaxDistance: 100
 --- !u!1 &2822519703803628921
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,13 +9,13 @@ public class Pergamena : MonoBehaviour
     public bool newGame;
     public bool exit;
 
-
+    public GameObject player;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Hand"))
         {
-            if (play && MenùManager.Singleton.oneTime)
+            if (play && MenùManager.Singleton.oneTime == false)
             {
                 MenùManager.Singleton.oneTime = true;
                 StartCoroutine(Play());
@@ -37,6 +37,7 @@ public class Pergamena : MonoBehaviour
     IEnumerator Play()
     {
         yield return new WaitForSeconds(2f);
+        Destroy(player);
         SceneManager.LoadScene(1);
     }
 
@@ -44,6 +45,7 @@ public class Pergamena : MonoBehaviour
     {
 
         yield return new WaitForSeconds(2f);
+        Destroy(player);
         Application.Quit();
     }
 

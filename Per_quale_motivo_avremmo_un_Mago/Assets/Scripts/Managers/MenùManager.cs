@@ -10,6 +10,8 @@ public class MenùManager : MonoBehaviour
     public GameObject dialogo;
     public GameObject musica;
 
+    public GameObject player;
+
     public bool newGameee;
 
     public bool oneTime;
@@ -38,6 +40,7 @@ public class MenùManager : MonoBehaviour
         musica.SetActive(false);
         dialogo.SetActive(true);
         yield return new WaitForSeconds(45f);
+        Destroy(player);
         SceneManager.LoadScene(1);
     }
 }

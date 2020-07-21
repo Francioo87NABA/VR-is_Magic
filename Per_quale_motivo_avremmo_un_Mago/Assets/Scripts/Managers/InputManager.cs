@@ -35,6 +35,8 @@ public class InputManager : MonoBehaviour
     public GameObject PS_teletrasporto;
     public GameObject CashedPS_teletrasporto;
 
+    public GameObject realPlayer;
+
     public bool gameOver;
 
     [Header("SteamVR References")]
@@ -163,7 +165,9 @@ public class InputManager : MonoBehaviour
         if (teleportAction.GetStateDown(leftHand.handType) || teleportAction.GetStateDown(rightHand.handType) && teletrasportatiQui != null)
         {
             player.transform.position = teletrasportatiQui.position;
+            player.transform.rotation = teletrasportatiQui.rotation;
             CashedPS_teletrasporto = Instantiate(PS_teletrasporto, teletrasportatiQui.position, teletrasportatiQui.rotation);
+           
             Destroy(CashedPS_teletrasporto, 6.3f);
         }
 
@@ -177,6 +181,7 @@ public class InputManager : MonoBehaviour
     {
         //Aggiungi qualcosa che faccia capire di aver perso
         yield return new WaitForSecondsRealtime(5f);
+        Destroy(realPlayer);
         SceneManager.LoadScene(0);
     }
 }

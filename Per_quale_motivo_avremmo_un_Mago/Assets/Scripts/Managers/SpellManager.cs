@@ -97,11 +97,11 @@ public class SpellManager : MonoBehaviour
 
     IEnumerator Proiettili()
     {
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < 8; i++)
         {
             Instantiate(muzzle, wandRay.position, wandRay.rotation);
             Instantiate(proiettile, wandRay.position, wandRay.rotation);
-            yield return new WaitForSecondsRealtime(0.3f);
+            yield return new WaitForSecondsRealtime(1f);
         }
     }
 
