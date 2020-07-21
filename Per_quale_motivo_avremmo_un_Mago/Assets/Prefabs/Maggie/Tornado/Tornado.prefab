@@ -182,6 +182,7 @@ GameObject:
   - component: {fileID: 2822519703779705330}
   - component: {fileID: 2822519703779705331}
   - component: {fileID: 4541992575394713453}
+  - component: {fileID: 1495934402118118273}
   m_Layer: 0
   m_Name: Tornado
   m_TagString: Magia
@@ -198,7 +199,7 @@ Transform:
   m_GameObject: {fileID: 2822519703779705341}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 50.2, y: -2.8, z: -36.52}
-  m_LocalScale: {x: 7.4538097, y: 7.4538097, z: 7.4538097}
+  m_LocalScale: {x: 20.1595, y: 20.1595, z: 20.1595}
   m_Children:
   - {fileID: 2822519703413629545}
   - {fileID: 2822519703581877626}
@@ -220,8 +221,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementEasyType: 14
-  movementRadius: 20
-  movementSpeed: 0.1
+  movementRadius: 25
+  movementSpeed: 1
 --- !u!136 &4541992575394713453
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -236,6 +237,29 @@ CapsuleCollider:
   m_Height: 2.1988533
   m_Direction: 1
   m_Center: {x: -0.024116524, y: 0.8079249, z: -0.014938038}
+--- !u!114 &1495934402118118273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2822519703779705341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Magie/Tornado/Tornado
+  PlayEvent: 11
+  StopEvent: 12
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 0.9
+  OverrideMaxDistance: 48.4
 --- !u!1 &2822519703803628921
 GameObject:
   m_ObjectHideFlags: 0

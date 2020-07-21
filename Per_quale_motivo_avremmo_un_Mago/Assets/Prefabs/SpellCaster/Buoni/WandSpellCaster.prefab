@@ -184,6 +184,7 @@ GameObject:
   - component: {fileID: 2278254917445184890}
   - component: {fileID: 1070906398}
   - component: {fileID: 8863897051926726088}
+  - component: {fileID: 5138616042591647250}
   m_Layer: 0
   m_Name: WandSpellCaster
   m_TagString: Untagged
@@ -274,9 +275,32 @@ MonoBehaviour:
   spellName: Tornado
   spellPointsSequence:
   - {fileID: 4225198583817910663}
-  - {fileID: 3494268878934538609}
   - {fileID: 2678764055067666379}
+  - {fileID: 3494268878934538609}
   SpellCasted: 0
+--- !u!114 &5138616042591647250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3624779990442998637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Magie/SpellCaster
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 10
 --- !u!1001 &7175096441342210896
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -363,6 +387,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 0.89171994
+      objectReference: {fileID: 0}
+    - target: {fileID: 9127676287873782652, guid: f94898ec5af61a54c8956bd264a3bb73,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.12923558
+      objectReference: {fileID: 0}
+    - target: {fileID: 9127676287873782652, guid: f94898ec5af61a54c8956bd264a3bb73,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -0.005819041
+      objectReference: {fileID: 0}
+    - target: {fileID: 9127676287873782652, guid: f94898ec5af61a54c8956bd264a3bb73,
+        type: 3}
+      propertyPath: m_Center.y
+      value: -0.009648724
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4360764142447053269, guid: f94898ec5af61a54c8956bd264a3bb73, type: 3}
@@ -472,6 +511,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.89171994
       objectReference: {fileID: 0}
+    - target: {fileID: 9127676287873782652, guid: f94898ec5af61a54c8956bd264a3bb73,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.13381712
+      objectReference: {fileID: 0}
+    - target: {fileID: 9127676287873782652, guid: f94898ec5af61a54c8956bd264a3bb73,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -0.0031264825
+      objectReference: {fileID: 0}
+    - target: {fileID: 9127676287873782652, guid: f94898ec5af61a54c8956bd264a3bb73,
+        type: 3}
+      propertyPath: m_Center.y
+      value: -4.15752e-11
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4360764142447053269, guid: f94898ec5af61a54c8956bd264a3bb73, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f94898ec5af61a54c8956bd264a3bb73, type: 3}
@@ -579,6 +633,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 0.89172006
+      objectReference: {fileID: 0}
+    - target: {fileID: 9127676287873782652, guid: f94898ec5af61a54c8956bd264a3bb73,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.12835324
+      objectReference: {fileID: 0}
+    - target: {fileID: 9127676287873782652, guid: f94898ec5af61a54c8956bd264a3bb73,
+        type: 3}
+      propertyPath: m_Center.x
+      value: 0.003055102
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4360764142447053269, guid: f94898ec5af61a54c8956bd264a3bb73, type: 3}
