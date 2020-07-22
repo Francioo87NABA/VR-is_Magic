@@ -16,7 +16,7 @@ public class SpawnManager : MonoBehaviour
     public GameObject enemyContainerTorre2;
     public GameObject enemyContainerTorre3;
     public GameObject nino;
-    public bool aspetta;
+    //public bool aspetta;
 
     public bool stopSpawning;
 
@@ -36,9 +36,12 @@ public class SpawnManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (stopSpawning)
+        if (stopSpawning )
         {
-            StartCoroutine(HaiVinto());
+            if (enemyContainerTorre1.GetComponentInChildren<Goblinino>() == null && enemyContainerTorre2.GetComponentInChildren<Goblinino>() == null && enemyContainerTorre3.GetComponentInChildren<Goblinino>() == null)
+            {
+                StartCoroutine(HaiVinto());
+            }
         }
     }
 
@@ -50,7 +53,7 @@ public class SpawnManager : MonoBehaviour
         {
             
             //1* ondata torre1
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 10; i++) 
             {
                 int where = Random.Range(0, spawnPointsTorre1.Length);
 
@@ -64,7 +67,7 @@ public class SpawnManager : MonoBehaviour
             yield return new WaitForSeconds(8f);
 
             //2* ondata torre2
-            for (int i = 0; i < 15; i++)
+            for (int i = 0; i < 15; i++) 
             {
                 int where = Random.Range(0, spawnPointsTorre2.Length);
 

@@ -87,27 +87,27 @@ public class Goblinino : MonoBehaviour
             myAgent.SetDestination(portone.position);
         }
 
-        if (other.CompareTag("PuntoDAttesa"))
-        {
-            if (SpawnManager.Singleton.aspetta && portone != null)
-            {
-                myAgent.SetDestination(transform.position);
-                myAnimator.SetBool("Idle", true);
-                seiInIdle = true;
-            }
-            else if (SpawnManager.Singleton.aspetta == false && portone != null)
-            {
-                seiInIdle = false;
-                myAnimator.SetBool("Idle", false);
-                myAgent.SetDestination(AiTarget.position);
-            }
-            else if (portone == null)
-            {
-                seiInIdle = false;
-                myAnimator.SetBool("Idle", false);
-                myAgent.SetDestination(AiTarget.position);
-            }
-        }
+        //if (other.CompareTag("PuntoDAttesa"))
+        //{
+        //    if (SpawnManager.Singleton.aspetta && portone != null)
+        //    {
+        //        myAgent.SetDestination(transform.position);
+        //        myAnimator.SetBool("Idle", true);
+        //        seiInIdle = true;
+        //    }
+        //    else if (SpawnManager.Singleton.aspetta == false && portone != null)
+        //    {
+        //        seiInIdle = false;
+        //        myAnimator.SetBool("Idle", false);
+        //        myAgent.SetDestination(AiTarget.position);
+        //    }
+        //    else if (portone == null)
+        //    {
+        //        seiInIdle = false;
+        //        myAnimator.SetBool("Idle", false);
+        //        myAgent.SetDestination(AiTarget.position);
+        //    }
+        //}
     }
 
     private void OnTriggerEnter(Collider other)

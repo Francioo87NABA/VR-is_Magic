@@ -5,19 +5,5 @@ using UnityEngine;
 public class Arma : MonoBehaviour
 {
     public int dannoArma;
-    public bool controllaMente;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-  
-    }
-
 
 }

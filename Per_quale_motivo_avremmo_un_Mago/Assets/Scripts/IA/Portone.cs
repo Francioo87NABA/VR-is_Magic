@@ -26,6 +26,7 @@ public class Portone : MonoBehaviour
             Destroy(padre);
             Destroy(gameObject);
         }
+
     }
 
     private void OnTriggerEnter(Collider other)
