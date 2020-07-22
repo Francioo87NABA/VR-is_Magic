@@ -91,13 +91,13 @@ public class SpellManager : MonoBehaviour
     IEnumerator Metamorfosi()
     {
         metamorfosi = true;
-        yield return new WaitForSecondsRealtime(3f);
+        yield return new WaitForSecondsRealtime(1.7f);
         metamorfosi = false;
     }
 
     IEnumerator Proiettili()
     {
-        for (int i = 0; i < 8; i++)
+        for (int i = 0; i < 7; i++)
         {
             Instantiate(muzzle, wandRay.position, wandRay.rotation);
             Instantiate(proiettile, wandRay.position, wandRay.rotation);
