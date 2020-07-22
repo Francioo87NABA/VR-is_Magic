@@ -74,8 +74,7 @@ public class Goblinino : MonoBehaviour
         {
             GameObject newAnimal = Instantiate(animale, transform.position, transform.rotation);
             newAnimal.transform.parent = gameObject.GetComponentInParent<EnemyContainer>().transform;
-            //Destroy(gameObject);
-
+            Destroy(gameObject);
         }
     }
 

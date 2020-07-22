@@ -44,10 +44,11 @@ public class SpawnManager : MonoBehaviour
 
     IEnumerator EnemySpawningPeriod()
     {
-        yield return new WaitForSecondsRealtime(3f);
+        yield return new WaitForSecondsRealtime(4f);
 
         while (stopSpawning == false)
         {
+            
             //1* ondata torre1
             for (int i = 0; i < 10; i++)
             {
@@ -57,11 +58,13 @@ public class SpawnManager : MonoBehaviour
 
                 newEnemy.transform.parent = enemyContainerTorre1.transform;
 
-                yield return new WaitForSecondsRealtime(10f);
+                yield return new WaitForSecondsRealtime(3f);
             }
 
+            yield return new WaitForSeconds(8f);
+
             //2* ondata torre2
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 15; i++)
             {
                 int where = Random.Range(0, spawnPointsTorre2.Length);
 
@@ -69,11 +72,13 @@ public class SpawnManager : MonoBehaviour
 
                 newEnemy.transform.parent = enemyContainerTorre2.transform;
 
-                yield return new WaitForSecondsRealtime(8f);
+                yield return new WaitForSecondsRealtime(2f);
             }
 
+            yield return new WaitForSeconds(3f);
+
             //3* ondata torre3
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 20; i++)
             {
                 int where = Random.Range(0, spawnPointsTorre3.Length);
 
@@ -81,7 +86,7 @@ public class SpawnManager : MonoBehaviour
 
                 newEnemy.transform.parent = enemyContainerTorre3.transform;
 
-                yield return new WaitForSecondsRealtime(6f);
+                yield return new WaitForSecondsRealtime(1f);
             }
 
             Debug.Log("haivinto");

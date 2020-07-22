@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: event:/Nino/Morte/Morte
   guid: 9341fd5600f1b940bf04cc1a1d76613d
   Banks:
-  - {fileID: -1091090904067332770}
+  - {fileID: -8208384856871367146}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -41,6 +41,42 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-8478996933432688478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMODE_VR_is_Magic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637309777767860288
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-8208384856871367146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMODE_VR_is_Magic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637309801845666834
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-7998516315737561730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56,7 +92,7 @@ MonoBehaviour:
   Path: event:/Dialogo/DialogoNewGame
   guid: c34d034e216ba84c9aba7f53b6cb42c7
   Banks:
-  - {fileID: -1091090904067332770}
+  - {fileID: -8208384856871367146}
   IsStream: 1
   Is3D: 1
   IsOneShot: 1
@@ -79,7 +115,7 @@ MonoBehaviour:
   Path: event:/Musica/Attacco
   guid: 1ddf54e69a76a545b8c1d7223040d4a0
   Banks:
-  - {fileID: -1091090904067332770}
+  - {fileID: -8208384856871367146}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -102,7 +138,7 @@ MonoBehaviour:
   Path: event:/Nino/Random/Random
   guid: 291fa33459235645aa98fa84ff02ae8a
   Banks:
-  - {fileID: -1091090904067332770}
+  - {fileID: -8208384856871367146}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -143,7 +179,7 @@ MonoBehaviour:
   Path: event:/Musica/Menu
   guid: 01b4fe1f4c84034a9ce4da7d38bef9e6
   Banks:
-  - {fileID: -1091090904067332770}
+  - {fileID: -8208384856871367146}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -184,7 +220,7 @@ MonoBehaviour:
   Path: event:/Magie/Tornado/Tornado
   guid: 242453dbd070e94abb03098d6be8e1ac
   Banks:
-  - {fileID: -1091090904067332770}
+  - {fileID: -8208384856871367146}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -207,7 +243,7 @@ MonoBehaviour:
   Path: "event:/Magie/Fulmine/Elettricit\xE0"
   guid: aefb87406a3ddf4f861fb88ea72220e0
   Banks:
-  - {fileID: -1091090904067332770}
+  - {fileID: -8208384856871367146}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -266,7 +302,7 @@ MonoBehaviour:
   Path: event:/Magie/Proiettile/Proiettile
   guid: 953fdd64fda0734ea3c397c36ce6faf0
   Banks:
-  - {fileID: -1091090904067332770}
+  - {fileID: -8208384856871367146}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -289,7 +325,7 @@ MonoBehaviour:
   Path: event:/Magie/Teletrasporto/Teletrasporto
   guid: 51e99b96d00db942b13a0f558c643dbb
   Banks:
-  - {fileID: -1091090904067332770}
+  - {fileID: -8208384856871367146}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -312,7 +348,7 @@ MonoBehaviour:
   Path: event:/Nino/Vittoria/Vittoria
   guid: 182255fe45c17246946c61fe923b7a64
   Banks:
-  - {fileID: -1091090904067332770}
+  - {fileID: -8208384856871367146}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -338,6 +374,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &-691199754642058599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMODE_VR_is_Magic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637309779129093451
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &-416133508612664393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -353,7 +407,7 @@ MonoBehaviour:
   Path: event:/Magie/SpellCaster
   guid: c8ed695ec0edc54db0fe2c0bcc316699
   Banks:
-  - {fileID: -1091090904067332770}
+  - {fileID: -8208384856871367146}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -393,7 +447,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 8767852797580668669}
-  - {fileID: -1091090904067332770}
+  - {fileID: -8208384856871367146}
   EditorEvents:
   - {fileID: 7364476260874833134}
   - {fileID: -5037575170755951424}
@@ -413,10 +467,10 @@ MonoBehaviour:
   - {fileID: 183412630314847388}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -1091090904067332770}
+  - {fileID: -8208384856871367146}
   StringsBanks:
   - {fileID: 8767852797580668669}
-  stringsBankWriteTime: 637309740046615146
+  stringsBankWriteTime: 637309801845712898
   cacheVersion: 3
 --- !u!114 &183412630314847388
 MonoBehaviour:
@@ -433,7 +487,7 @@ MonoBehaviour:
   Path: "event:/Musica/Men\xF9"
   guid: 685178dea81ac946ab4cda50d3245f4b
   Banks:
-  - {fileID: -1091090904067332770}
+  - {fileID: -8208384856871367146}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -463,6 +517,24 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 33140
+--- !u!114 &2337902345217546877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMODE_VR_is_Magic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637309771036967858
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &2424613004001083264
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -496,7 +568,7 @@ MonoBehaviour:
   Path: event:/Magie/FireBall/Esplosione
   guid: ec1aa706e880f6439e889adedf82c085
   Banks:
-  - {fileID: -1091090904067332770}
+  - {fileID: -8208384856871367146}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -537,7 +609,7 @@ MonoBehaviour:
   Path: event:/Magie/Fulmine/Strike
   guid: 77822c9658a5304d88186c85e8dc859e
   Banks:
-  - {fileID: -1091090904067332770}
+  - {fileID: -8208384856871367146}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -545,6 +617,24 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 6700
+--- !u!114 &6260652742576569355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMODE_VR_is_Magic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637309794519185600
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &6271908134236772632
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -578,7 +668,7 @@ MonoBehaviour:
   Path: event:/Magie/FireBall/Fuoco
   guid: 1da3cd7925218f42985ff10c2d03bb0a
   Banks:
-  - {fileID: -1091090904067332770}
+  - {fileID: -8208384856871367146}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -600,7 +690,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: FMODE_VR_is_Magic/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637309740046615146
+  lastModified: 637309801845712898
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -621,7 +711,7 @@ MonoBehaviour:
   Path: event:/Nino/Attacco/Attacco
   guid: 01aa9302654f404cb686f36732157b92
   Banks:
-  - {fileID: -1091090904067332770}
+  - {fileID: -8208384856871367146}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1

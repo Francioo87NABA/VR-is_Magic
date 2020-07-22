@@ -19,16 +19,5 @@ public class Arma : MonoBehaviour
   
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Enemy") && controllaMente)
-        {
-            Destroy(other.gameObject);
-        }
-        
-        if (other.CompareTag("Arma") && controllaMente)
-        {
-            Destroy(gameObject);
-        }
-    }
+
 }

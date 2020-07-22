@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Portone : MonoBehaviour
 {
-    public int vita = 100;
+    public int vita;
 
     private int danno;
 

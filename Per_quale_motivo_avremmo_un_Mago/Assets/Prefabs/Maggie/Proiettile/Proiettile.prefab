@@ -4848,14 +4848,14 @@ MonoBehaviour:
   CollisionTag: 
   Event: event:/Magie/Proiettile/Proiettile
   PlayEvent: 1
-  StopEvent: 2
+  StopEvent: 12
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
   Params: []
   OverrideAttenuation: 1
-  OverrideMinDistance: 0.3
-  OverrideMaxDistance: 5
+  OverrideMinDistance: 0.5
+  OverrideMaxDistance: 10
 --- !u!1 &6010309538259817893
 GameObject:
   m_ObjectHideFlags: 0
